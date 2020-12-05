@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title', 'Sub Page Title')
+@section('title', 'Sub Page Title Github')
 
 @section('sidebar')
     <div class="col-sm-3 col-lg-2" style="background-color: brown">
