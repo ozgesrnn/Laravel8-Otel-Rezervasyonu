@@ -15,21 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.homepage');
 });
-Route::redirect('/anasayfa', '/home'); //anasayfa ya giderken bile home gitmesini sağladık
+/*Route::redirect('/anasayfa', '/home'); //anasayfa ya giderken bile home gitmesini sağladık*/
 
-Route::get('home', function () {
-    return view('home.index', ['name' => 'Ozge Sirin']); // bu şekilde yönlendirme yapabiliyoruz home da name yazdırdık.
+/*Route::get('home', function () {
+    return view('home.index', ['name' => 'Ozge Sirin']); // bu şekilde yönlendirme yapabiliyoruz home da name yazdırdık.*/
 
 //Route::get('home', function () {
    // return view('home.index'); // home sayfasına direk homecontroller sız gitmesini sağladık.
-});
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+/*Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 //Route::get('/test/{id}/{name}', [HomeController::class, 'test']) -> where(['id'=> '[0-9]+', 'name'=>'[A-Za-z]+']);
-Route::get('/test/{id}/{name}', [HomeController::class, 'test']) -> whereNumber('id')-> whereAlpha('name')->name('test');
+Route::get('/test/{id}/{name}', [HomeController::class, 'test']) -> whereNumber('id')-> whereAlpha('name')->name('test');*/
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

@@ -1,60 +1,91 @@
-<footer class="tm-black-bg">
-    <div class="container">
-        <div class="row">
-            <p class="tm-copyright-text">Copyright &copy; 2084 Your Company Name
-
-                | Designed by templatemo</p>
-        </div>
     </div>
-</footer>
-<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
-<script type="text/javascript" src="js/moment.js"></script>							<!-- moment.js -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->
-<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>	<!-- bootstrap date time picker js, http://eonasdan.github.io/bootstrap-datetimepicker/ -->
-<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-<!--
-	<script src="js/froogaloop.js"></script>
-	<script src="js/jquery.fitvid.js"></script>
--->
-<script type="text/javascript" src="js/templatemo-script.js"></script>      		<!-- Templatemo Script -->
+</div>
+<footr>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <ul class="sociel">
+                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="contact">
+                        <h3>conatct us</h3>
+                        <span>123 Second Street Fifth Avenue,<br>
+                       Manhattan, New York<br>
+                        +987 654 3210</span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="contact">
+                        <h3>ADDITIONAL LINKS</h3>
+                        <ul class="lik">
+                            <li> <a href="#">About us</a></li>
+                            <li> <a href="#">Terms and conditions</a></li>
+                            <li> <a href="#">Privacy policy</a></li>
+                            <li> <a href="#">News</a></li>
+                            <li> <a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="contact">
+                        <h3>service</h3>
+                        <ul class="lik">
+                            <li> <a href="#"> Data recovery</a></li>
+                            <li> <a href="#">Computer repair</a></li>
+                            <li> <a href="#">Mobile service</a></li>
+                            <li> <a href="#">Network solutions</a></li>
+                            <li> <a href="#">Technical support</a></li>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="contact">
+                        <h3>About lighten</h3>
+                        <span>Tincidunt elit magnis nulla facilisis. Dolor Sapien nunc amet ultrices, </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright 2020 All Right Reserved By <a href="{{asset('assets')}}/https://html.design/">TatilGemisi.com</a></p>
+        </div>
+
+    </div>
+</footr>
+<!-- end footer -->
+<!-- Javascript files-->
+<script src="{{asset('assets')}}/js/jquery.min.js"></script>
+<script src="{{asset('assets')}}/js/popper.min.js"></script>
+<script src="{{asset('assets')}}/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('assets')}}/js/jquery-3.0.0.min.js"></script>
+<script src="{{asset('assets')}}/js/plugin.js"></script>
+<!-- sidebar -->
+<script src="{{asset('assets')}}/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="{{asset('assets')}}/js/custom.js"></script>
+<script src="{{asset('assets')}}/https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script>
-    // HTML document is loaded. DOM is ready.
-    $(function() {
-
-        $('#hotelCarTabs a').click(function (e) {
-            e.preventDefault()
-            $(this).tab('show')
-        })
-
-        $('.date').datetimepicker({
-            format: 'MM/DD/YYYY'
+    $(document).ready(function(){
+        $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
         });
-        $('.date-time').datetimepicker();
 
-        // https://css-tricks.com/snippets/jquery/smooth-scrolling/
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
+        $(".zoom").hover(function(){
+
+            $(this).addClass('transition');
+        }, function(){
+
+            $(this).removeClass('transition');
         });
     });
 
-
-    $(window).load(function() {
-
-
-//	For images only
-        $('.flexslider').flexslider({
-            controlNav: false
-        });
-
-
-    });
 </script>
+</body>
+</html>
