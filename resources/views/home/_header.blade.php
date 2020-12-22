@@ -60,15 +60,30 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-xl-9 col-lg-9 pcol-md-8 col-sm-8">
+            <div class="col-xl-10 col-lg-10 pcol-md-10 col-sm-10">
                 <div class="menu-area">
                     <div class="limit-box">
                         <nav class="main-menu">
                             <ul class="menu-area-main">
                                 <li class="active"> <a href="index.html">Home</a> </li>
-                                <li> <a href="about.html">Oteller</a> </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oteller</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Yurtiçi Otelleri</a></li>
+                                        <li><a href="#">Yurtdışı Otelleri</a></li>
+
+                                    </ul>
+                                </li>
                                 <li> <a href="product.html">Erken Rezevasyon</a> </li>
-                                <li> <a href="blog.html">Kış Tatili</a> </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Turlar</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Doğu Ekspresi</a></li>
+                                        <li><a href="#">Karadeniz Turu</a></li>
+                                        <li><a href="#">GAP Turu</a></li>
+                                        <li><a href="#">Kapadokya Turu</a></li>
+                                    </ul>
+                                </li>
                                 <li> <a href="contact.html">Fırsatlar</a> </li>
                                 <li> <a href="contact.html">İletişim</a> </li>
 

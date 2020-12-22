@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use app\Http\Controllers\HomeController as HomeControllers;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home.homepage');
+
 });
+/*Route::get('/home2', function () {
+    return view('welcome');
+
+});*/
+Route::redirect('/anasayfa', '/home')->name ('anasayfa');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+
+//Admin
+Route::get('/admin',[App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
+Route::middleware(['auth:sanctum' , 'verified'])->get('/dashboard' , function (){
+    return view('dashboard');
+})->name('dashboard');
+
 /*Route::redirect('/anasayfa', '/home'); //anasayfa ya giderken bile home gitmesini sağladık*/
 
 /*Route::get('home', function () {
@@ -26,11 +42,11 @@ Route::get('/', function () {
    // return view('home.index'); // home sayfasına direk homecontroller sız gitmesini sağladık.
 
 
-/*Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+//Route::get('/home', [HomeController::class, 'index'])->name('home');
+//Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 //Route::get('/test/{id}/{name}', [HomeController::class, 'test']) -> where(['id'=> '[0-9]+', 'name'=>'[A-Za-z]+']);
-Route::get('/test/{id}/{name}', [HomeController::class, 'test']) -> whereNumber('id')-> whereAlpha('name')->name('test');*/
+Route::get('/test/{id}/{name}', [HomeController::class, 'test']) -> whereNumber('id')-> whereAlpha('name')->name('test');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+/*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard');*/

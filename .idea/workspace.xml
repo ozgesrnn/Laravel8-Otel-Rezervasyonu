@@ -2,133 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd688bee-754e-4c34-87f3-514f4e3d9d00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/home/homepage.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/_footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temps/Otelcss/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temps/Otelcss/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/css/bootstrap-datetimepicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/css/flexslider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/css/fonts/flexslider-icon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/css/fonts/flexslider-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/css/fonts/flexslider-icon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/css/fonts/flexslider-icon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/css/templatemo-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/about-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/about-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/about-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/about-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/about-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/about-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/about-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/banner-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/banner-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/banner-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/index-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/rating.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/tours-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/img/world-map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temps/Otelcss/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/js/bootstrap-datetimepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/js/jquery-1.11.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/js/jquery.flexslider-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/js/moment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/js/templatemo-script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temps/Otelcss/tours.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/bootstrap-datetimepicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/flexslider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/fonts/flexslider-icon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/fonts/flexslider-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/fonts/flexslider-icon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/fonts/flexslider-icon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/templatemo-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/about-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/about-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/about-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/about-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/about-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/about-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/about-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/banner-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/banner-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/banner-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/index-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/rating.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/tours-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/world-map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/bootstrap-datetimepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/jquery-1.11.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/jquery.flexslider-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/moment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/templatemo-script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -320,7 +202,10 @@
       <workItem from="1607361831988" duration="2000" />
       <workItem from="1607432687119" duration="22492000" />
       <workItem from="1607468302860" duration="402000" />
-      <workItem from="1607520274483" duration="181000" />
+      <workItem from="1607520274483" duration="4380000" />
+      <workItem from="1608456398816" duration="4028000" />
+      <workItem from="1608540686099" duration="3698000" />
+      <workItem from="1608637152936" duration="3778000" />
     </task>
     <task id="LOCAL-00001" summary="index changed">
       <created>1607198732025</created>
@@ -329,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607198732025</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="index changed">
+      <created>1607520517648</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607520517648</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,26 +236,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607439027714" />
-    <state x="786" y="0" key="CommitChangelistDialog2" timestamp="1607198731435">
+    <state x="547" y="502" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1608541782207">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="786" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607198731434" />
+    <state x="547" y="502" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1536.824@0.0.1536.824" timestamp="1608541782207" />
+    <state x="786" y="0" key="CommitChangelistDialog2" timestamp="1607520516718">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="786" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607520516718" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607188724587">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607188724587" />
-    <state x="834" y="346" key="NewPhpFileDialog" timestamp="1607439003546">
+    <state x="834" y="346" key="NewPhpFileDialog" timestamp="1608639283090">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="834" y="346" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1607439003546" />
+    <state x="834" y="346" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1608639283090" />
     <state x="747" y="57" width="914" height="710" key="SettingsEditor" timestamp="1607198622105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="747" y="57" width="914" height="710" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607198622105" />
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607198777921">
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1608640388789">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607198777921" />
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608640388789" />
     <state x="192" y="96" width="1124" height="573" key="dock-window-1" timestamp="1606340284361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
