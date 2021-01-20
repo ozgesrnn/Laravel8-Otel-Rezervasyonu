@@ -2,9 +2,9 @@
 @extends('home.homepage')
 
 
-@section('title' , 'About Us' )
-@section('description'){{$setting->description}}@endsection
-@section('keywords' , $setting->keywords)
+@section('title' , 'References' )
+@section('description'){{$setting->title}}@endsection
+@section('keywords' , $setting->title)
 
 
 @section('content')
@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-12">
              <div class="row">
-                 {!! $setting->aboutus!!}
+                 {!! $setting->references !!}
              </div>
             </div>
 

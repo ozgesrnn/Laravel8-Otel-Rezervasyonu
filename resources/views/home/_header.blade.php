@@ -1,105 +1,91 @@
 <!DOCTYPE html>
-<html lang="tr">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <title>Luxe &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FREEHTML5.CO" />
 
-    <title>@yield('title')</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!--
+      //////////////////////////////////////////////////////
 
-    <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.min.css">
+      FREE HTML5 TEMPLATE
+      DESIGNED & DEVELOPED by FREEHTML5.CO
 
+      Website: 		http://freehtml5.co/
+      Email: 			info@freehtml5.co
+      Twitter: 		http://twitter.com/fh5co
+      Facebook: 		https://www.facebook.com/fh5co
+
+      //////////////////////////////////////////////////////
+       -->
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="{{asset('assets')}}/favicon.ico">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,900,700,900italic' rel='stylesheet' type='text/css'> -->
+
+    <!-- Stylesheets -->
+    <!-- Dropdown Menu -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/superfish.css">
+    <!-- Owl Slider -->
+    <!-- <link rel="stylesheet" href="{{asset('assets')}}/css/owl.carousel.css"> -->
+    <!-- <link rel="stylesheet" href="{{asset('assets')}}/css/owl.theme.default.min.css"> -->
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap-datepicker.min.css">
+    <!-- CS Select -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/cs-select.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/cs-skin-border.css">
+
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/themify-icons.css">
+    <!-- Flat Icon -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/flaticon.css">
+    <!-- Icomoon -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/icomoon.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/flexslider.css">
+
+    <!-- Style -->
     <link rel="stylesheet" href="{{asset('assets')}}/css/style.css">
 
-    <link rel="stylesheet" href="{{asset('assets')}}/css/responsive.css">
+    <!-- Modernizr JS -->
+    <script src="{{asset('assets')}}/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{{asset('assets')}}/js/respond.min.js"></script>
+    <![endif]-->
 
-    <link rel="icon" href="{{asset('assets')}}/images/fevicon.png" type="image/gif" />
-
-    <link rel="stylesheet" href="{{asset('assets')}}/css/jquery.mCustomScrollbar.min.css">
-
-    <link rel="stylesheet" href="{{asset('assets')}}/https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-
-    <script src="{{asset('assets')}}/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="{{asset('assets')}}/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
+<body>
+<div id="fh5co-wrapper">
+    <div id="fh5co-page">
+        <div id="fh5co-header">
+            <header id="fh5co-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <a href="{{asset('assets')}}/#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+                        <h1 id="fh5co-logo"><a href="{{asset('assets')}}/index.html">Luxe</a></h1>
 
-<body class="main-layout">
-
-<div class="loader_bg">
-    <div class="loader"><img src="{{asset('assets')}}/images/loading.gif" alt="#" /></div>
-</div>
-
-<header>
-<!-- header inner -->
-<div class="header">
-    <div class="head_top">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col logo_section">
-                    <div class="full">
-                        <div class="center-desk">
-                            <div class="logo"> <a href="index.html"><img src="{{asset('assets')}}/images/logo1.jpg" alt="logo"/></a> </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-xl-10 col-lg-10 col-md-14 col-sm-14">
-                    <li><a class="buy" href="#">Giriş Yap</a></li>
-                    <li><a class="buy" href="#">Üye Ol</a></li>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-
-            <div class="col-xl-10 col-lg-10 pcol-md-10 col-sm-10">
-                <div class="menu-area">
-                    <div class="limit-box">
-                        <nav class="main-menu">
-                            <ul class="menu-area-main">
-                                <li class="active"> <a href="index.html">Home</a> </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oteller</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Yurtiçi Otelleri</a></li>
-                                        <li><a href="#">Yurtdışı Otelleri</a></li>
-
-                                    </ul>
-                                </li>
-                                <li> <a href="product.html">Erken Rezevasyon</a> </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Turlar</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Doğu Ekspresi</a></li>
-                                        <li><a href="#">Karadeniz Turu</a></li>
-                                        <li><a href="#">GAP Turu</a></li>
-                                        <li><a href="#">Kapadokya Turu</a></li>
-                                    </ul>
-                                </li>
-                                <li> <a href="contact.html">Fırsatlar</a> </li>
-                                <li> <a href="contact.html">İletişim</a> </li>
-
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+            </header>
 
         </div>
-    </div>
-    <!-- end header inner -->
-</div>
-</header>
-<div class="container">
-
-    <div class="row">
-
-
+        <!-- end:fh5co-header -->
