@@ -1,20 +1,11 @@
 
 
-
-<nav class="navbar bg-light">
-    <!-- Links -->
-
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('myprofile')}}">My Profile</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Rezervasyonlar</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('logout')}}">Çıkış Yap</a>
-        </li>
-    </ul>
-
-</nav>
+        <div class="col-md-12">
+            <ul class="link">
+                <li><a href="{{route('myprofile')}}" class="active">My Profile</a></li>
+                <li><a href="{{asset('assets')}}/#">Hotels</a></li>
+                <li><a href="{{asset('assets')}}/#">Messages</a></li>
+                <li><a href="{{route('logout')}}/#">Logout</a></li>
+            </ul>
+        </div>
 

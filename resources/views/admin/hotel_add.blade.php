@@ -24,7 +24,7 @@
                        <label ><b>Kategori</b> </label>
 
                        <select class="form-control select2" name="category_id" style="width: 100%;">
-                           <option value="">Seçim Yapınız</option>
+                           <option selected="selected">Main Category</option>
                            @foreach($datalist as $rs)
                              <option value="{{$rs->id}}">{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title )}}</option>
                            @endforeach
@@ -55,15 +55,13 @@
                        <input type="text" name="email" class="form-control"  >
                    </div>
                    <div class="form-group">
-                       <label ><b>Detail</b></label>
-                       <textarea id="summernote" name="detail" class="form-control" rows="4"></textarea>
-                       <script>
-                           $(document).ready(function() {
-                               $('#summernote').summernote();
-
-                           });
-                       </script>
-
+                       <label ><b>Price</b></label>
+                       <input type="text" name="price" class="form-control"  >
+                   </div>
+                   <div class="form-group">
+                       <label><b>Detail</b></label>
+                       <textarea id="editor1" class="ckeditor"></textarea>
+                   </div>
                    </div>
                    <div class="form-group">
                        <label ><b>Image</b></label>

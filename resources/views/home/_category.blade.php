@@ -11,9 +11,6 @@
                    <div class="custom-menu">
                        <div class="row" >
 
-
-
-
                            @if(count($rs->children))
                                @include('categorytree', ['children ' => $rs->children])
                            @endif

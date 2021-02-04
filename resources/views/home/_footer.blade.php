@@ -9,34 +9,38 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="copyright">
-                    <p><small>&copy; 2016 Free HTML5 Template. <br> All Rights Reserved. <br>
-                            Designed by <a htef="{{asset('assets')}}/http://freehtml5.co" target="_blank">FreeHTML5.co</a> <br> Demo Images: <a htef="{{asset('assets')}}/http://unsplash.com/" target="_blank">Unsplash</a></small></p>
+                    <p><small>Copyright &copy;<script>document.write(new Date().getFullYear());</script> <br> {{$setting->company}} <br>
+                        </small></p>
+                    <strong>Address :</strong>  {{$setting->address}}<br>
+                    <strong>Phone :</strong>  {{$setting->phone}}<br>
+                    <strong>Fax :</strong>  {{$setting->fax}}<br>
+                    <strong>Email :</strong>  {{$setting->email}}<br>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-3">
-                        <h3>Company</h3>
+                        <h3>ADDRESS </h3>
+
                         <ul class="link">
-                            <li><a htef="{{asset('assets')}}/#">About Us</a></li>
-                            <li><a htef="{{asset('assets')}}/#">Hotels</a></li>
-                            <li><a htef="{{asset('assets')}}/#">Customer Care</a></li>
-                            <li><a htef="{{asset('assets')}}/#">Contact Us</a></li>
+                            <li><a href="{{route('aboutus')}}">About Us</a></li>
+                            <li><a href="{{asset('assets')}}/#">Hotels</a></li>
+                            <li><a href="{{asset('assets')}}/#">Customer Care</a></li>
+                            <li><a href="{{asset('assets')}}/#">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
-                        <h3>Our Facilities</h3>
+                        <h3>MY ACCOUNT</h3>
                         <ul class="link">
-                            <li><a htef="{{asset('assets')}}/#">Resturant</a></li>
-                            <li><a htef="{{asset('assets')}}/#">Bars</a></li>
-                            <li><a htef="{{asset('assets')}}/#">Pick-up</a></li>
-                            <li><a htef="{{asset('assets')}}/#">Swimming Pool</a></li>
-                            <li><a htef="{{asset('assets')}}/#">Spa</a></li>
-                            <li><a htef="{{asset('assets')}}/#">Gym</a></li>
+                            <li><a href="{{route('myprofile')}}">My Account</a></li>
+                            <li><a href="{{route('admin_login')}}">Login</a></li>
+                            <li><a href="{{asset('assets')}}/#">Pick-up</a></li>
+                            <li><a href="{{asset('assets')}}/#">Swimming Pool</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <h3>Subscribe</h3>
+                         <h3>COMPANY  <br><br>{{$setting->company}} </h3>
+
                         <p>Sed cursus ut nibh in semper. Mauris varius et magna in fermentum. </p>
                         <form action="#" id="form-subscribe">
                             <div class="form-field">
@@ -50,12 +54,17 @@
             <div class="col-md-3">
                 <ul class="social-icons">
                     <li>
-                        <a htef="{{asset('assets')}}/#"><i class="icon-twitter-with-circle"></i></a>
-                        <a htef="{{asset('assets')}}/#"><i class="icon-facebook-with-circle"></i></a>
-                        <a htef="{{asset('assets')}}/#"><i class="icon-instagram-with-circle"></i></a>
-                        <a htef="{{asset('assets')}}/#"><i class="icon-linkedin-with-circle"></i></a>
+                    @if ($setting->facebook !=null) <a href="{{$setting->facebook}}" target="_blank"><i class="icon-facebook-with-circle"></i></a>@endif
+                    @if ($setting->instagram !=null) <a href="{{$setting->instagram}}" target="_blank"><i class="icon-instagram-with-circle"></i></a>@endif
+                    @if ($setting->twitter !=null) <a href="{{$setting->twitter}}" target="_blank"><i class="icon-twitter-with-circle"></i></a>@endif
+                    <a href="{{asset('assets')}}/#" target="_blank"><i class="icon-linkedin-with-circle"></i></a>
                     </li>
                 </ul>
+            </div>
+            <div class="footer-logo">
+            <a class="logo" href="{{route('anasayfa')}}">
+                <img src="{{asset('assets')}}/images/logoo1.png" >
+            </a>
             </div>
         </div>
     </div>

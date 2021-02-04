@@ -30,8 +30,14 @@ Route::get('/anasayfa',[HomeController::class, 'index'])->name('anasayfa');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
+Route::get('/fag', [HomeController::class, 'fag'])->name('fag');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
-Route::get('/categoryhotel' , [HomeController::class, 'categoryhotel'])->name('categoryhotel');
+Route::get('/categoryhotels/{id}' , [HomeController::class, 'categoryhotels'])->name('categoryhotels');
+Route::get('/hotel/{id}' , [HomeController::class, 'hotel'])->name('hotel');
+Route::get('/rezervasyon/{id}' , [HomeController::class, 'hotel'])->name('rezervasyon');
+Route::post('/gethotel', [App\Http\Controllers\HomeController::class, 'gethotel'])->name('gethotel');
+Route::get('/hotellist/{search}', [App\Http\Controllers\HomeController::class, 'hotellist'])->name('hotellist');
+
 
 //Admin
 Route::middleware('auth')->prefix('admin')->group(function () {
@@ -76,14 +82,14 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     });
 
     #Setting
-    Route::get('setting', [\App\Http\Controllers\Admin\SettingController::class, 'edit'])->name('admin_setting_edit');
+    Route::get('setting', [\App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin_setting_edit');
     Route::post('setting/update', [\App\Http\Controllers\Admin\SettingController::class, 'update'])->name('admin_setting_update');
 
 });
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function () {
     Route::get('/',[UserController::class, 'index'])->name('myprofile');
 });
-Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
+Route::get('admin/login', [HomeController::class, 'login'])->name('admin_login');
 Route::post('/admin/logincheck', [HomeController::class, 'logincheck'])->name('admin_logincheck');
 Route::get('/logout', [HomeController:: class,'logout'])->name('admin_logout');
 

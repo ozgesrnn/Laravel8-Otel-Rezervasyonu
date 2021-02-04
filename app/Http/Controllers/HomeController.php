@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Livewire\Review;
 use App\Models\Category;
 use App\Models\Hotel;
+use App\Models\Image;
 use App\Models\Message;
 use App\Models\Setting;
 use Hamcrest\Core\Set;
@@ -22,20 +24,74 @@ class HomeController extends Controller
     {
         return Setting::first();
     }
+    public static function countreview($id)
+    {
+        return Review::where('hotel_id' , $id)->count();
+    }
+    public static function avgreview($id)
+    {
+        return Review::where('hotel_id', $id)->average('rate');
+    }
+
     public function index()
     {
         $setting = Setting::first();
-        return view('home.index', ['setting' => $setting, 'page'=>'home']);
+        $slider = Hotel::select('title' ,'image', 'price')->limit(3)->get();
+        $daily = Hotel::select('id', 'title' ,'image','price')->limit(6)->inRandomOrder()->get();
+        $last = Hotel::select('id', 'title', 'image','price')->limit(6)->orderByDesc('id')->get();
+        $picked = Hotel::select('id', 'title', 'image','price')->limit(6)->inRandomOrder()->get();
+
+        $data = [
+            'setting' => $setting,
+            'daily' => $daily,
+            'slider' => $slider,
+            'last' => $last,
+            'picked' => $picked,
+            'page'=>'home'
+
+       ];
+        return view('home.index' ,['data' => $data ]);
 
     }
     public function hotel($id)
     {
         $data = Hotel::find($id);
-        print_r($data);
-        exit();
+        $datalist = Image::where('hotel_id' ,$id)->get();
+        $reviews = Review::where('hotel_id' ,$id)->get();
+        /*print_r($data);
+        exit();*/
+        return view('home.hotel_detail',['data' => $data, 'datalist'=>$datalist, 'reviews' => $reviews]);
 
     }
-    public function categoryhotel(Request $request)
+    public function gethotel(Request $request)
+    {
+        $search=$request->input('search');
+
+        $count = Hotel::where('title', 'like' , '%' .$search.'%')->get()->count();
+        if ($count==1)
+        {
+            $data = Hotel::where('title', 'like' , '%' .$search.'%')->first();
+            return redirect()->route('hotel', ['id'=>$data->id]);
+        }
+        else {
+            return redirect()->route('hotellist',['search'=>$search]);
+        }
+
+    }
+
+    public function hotellist($search)
+    {
+        $datalist = Hotel::where('title', 'like', '%'.$search.'%' )->get();
+        return view('home.search_hotels', ['search'=>$search, 'datalist'=>$datalist]);
+    }
+    public function rezervasyon($id)
+    {
+        echo "Rezervasyon Yap <br>";
+        $data = Hotel::find($id);
+        print_r($data);
+        exit();
+    }
+    public function categoryhotels(Request $request)
     {
 
         $id=$request->input('id');
@@ -107,6 +163,7 @@ class HomeController extends Controller
         return view('home.references' ,  ['setting' => $setting]);
 
     }
+
 
 /*
     public function test($id,$name)

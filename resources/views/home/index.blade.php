@@ -1,87 +1,91 @@
-
 @php
     $setting = \App\Http\Controllers\HomeController::getsetting()
 @endphp
 
 @extends('home.homepage')
 
-@section('title' , $setting->title)
-@section('description'){{$setting->title}}@endsection
-@section('keywords' , $setting->title)
+@section('title')
+@section('description')
+@section('keywords')
+
 
 
 @section('content')
 
+    <aside id="fh5co-hero" class="js-fullheight">
+        <div class="flexslider js-fullheight">
+            <ul class="slides">
+                <li style="background-image: url({{asset('assets')}}/images/10.jpg);">
+                    <div class="overlay-gradient"></div>
+                    <div class="container">
+                        <div class="col-md-12 col-md-offset-0 text-center slider-text">
+                            <div class="slider-text-inner js-fullheight">
+                                <div class="desc">
+                                    <p><span>Bora Hotel</span></p>
+                                    <h2>Reserve Room for Family Vacation</h2>
+                                    <p>
+                                        <a href="#" class="btn btn-primary btn-lg">Book Now</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url({{asset('assets')}}/images/11.jpg);">
+                    <div class="overlay-gradient"></div>
+                    <div class="container">
+                        <div class="col-md-12 col-md-offset-0 text-center slider-text">
+                            <div class="slider-text-inner js-fullheight">
+                                <div class="desc">
+                                    <p><span>Deluxe Hotel</span></p>
+                                    <h2>Make Your Vacation Comfortable</h2>
+                                    <p>
+                                        <a href="#" class="btn btn-primary btn-lg">Look Now</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url({{asset('assets')}}/images/12.jpg);">
+                    <div class="overlay-gradient"></div>
+                    <div class="container">
+                        <div class="col-md-12 col-md-offset-0 text-center slider-text">
+                            <div class="slider-text-inner js-fullheight">
+                                <div class="desc">
+                                    <p><span>Luxe Hotel</span></p>
+                                    <h2>A Best Place To Enjoy Your Life</h2>
+                                    <p>
+                                        <a href="#" class="btn btn-primary btn-lg">Book Now</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
 
-        <aside id="fh5co-hero" class="js-fullheight">
-            <div class="flexslider js-fullheight">
-                <ul class="slides">
-                    <li style="background-image: url({{asset('assets')}}/images/banner1.jpg);">
-                        <div class="overlay-gradient"></div>
-                        <div class="container">
-                            <div class="col-md-12 col-md-offset-0 text-center slider-text">
-                                <div class="slider-text-inner js-fullheight">
-                                    <div class="desc">
-                                        <p><span>Bora Hotel</span></p>
-                                        <h2>Reserve Room for Family Vacation</h2>
-                                        <p>
-                                            <a href="{{asset('assets')}}/#" class="btn btn-primary btn-lg">Book Now</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li style="background-image: url(images/slider2.jpg);">
-                        <div class="overlay-gradient"></div>
-                        <div class="container">
-                            <div class="col-md-12 col-md-offset-0 text-center slider-text">
-                                <div class="slider-text-inner js-fullheight">
-                                    <div class="desc">
-                                        <p><span>Deluxe Hotel</span></p>
-                                        <h2>Make Your Vacation Comfortable</h2>
-                                        <p>
-                                            <a href="{{asset('assets')}}/#" class="btn btn-primary btn-lg">Book Now</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li style="background-image: img src(images/slider3.jpg);">
-                        <div class="overlay-gradient"></div>
-                        <div class="container">
-                            <div class="col-md-12 col-md-offset-0 text-center slider-text">
-                                <div class="slider-text-inner js-fullheight">
-                                    <div class="desc">
-                                        <p><span>Luxe Hotel</span></p>
-                                        <h2>A Best Place To Enjoy Your Life</h2>
-                                        <p>
-                                            <a href="{{asset('assets')}}/#" class="btn btn-primary btn-lg">Book Now</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </aside>
-        <div class="wrap">
+            </ul>
+        </div>
+    </aside>
+    <div class="wrap">
             <div class="container">
                 <div class="row">
                     <div id="availability">
-                        <form action="#">
 
                             <div class="a-col">
                                 <section>
-                                    <select class="cs-select cs-skin-border">
-                                        <option value="" disabled selected>Select Hotel</option>
-                                        <option value="email">Luxe Hotel</option>
-                                        <option value="twitter">Deluxe Hotel</option>
-                                        <option value="linkedin">Five Star Hotel</option>
-                                    </select>
+                                    <div class="a-col-search">
+                                        <div class="input-field">
+                                            <label>Search</label>
+                                        <form action="" method="post">
+                                            @csrf
+                                            @livewire('search')
+                                        </form>
+                                        @section('footerjs')
+                                        @livewireScripts
+                                        @endsection
+                                        </div>
+                                    </div>
                                 </section>
                             </div>
                             <div class="a-col alternate">
@@ -102,7 +106,7 @@
                                     Availability
                                 </a>
                             </div>
-                        </form>
+
                     </div>
                 </div>
             </div>
@@ -135,6 +139,7 @@
             <div class="container">
 
                 <div class="row">
+
                     <div class="col-md-12">
                         <div class="section-title text-center">
                             <h2>Featured Hotels</h2>
@@ -143,24 +148,25 @@
                 </div>
 
                 <div class="row">
+
                     <div class="feature-full-1col">
-                        <div class="image" style="background-image: url(images/hotel_feture_1.jpg);">
+                        <div class="image" style="background-image: url({{asset('assets')}}/images/banner.jpg);">
                             <div class="descrip text-center">
-                                <p><small>For as low as</small><span>$100/night</span></p>
+                                <p><small>For as low as</small><span></span></p>
                             </div>
                         </div>
                         <div class="desc">
-                            <h3>Deluxe Hotel</h3>
+                            <h3></h3>
                             <p>Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestas. Etiam euismod tempor leo, in suscipit urna condimentum sed. Vivamus augue enim, consectetur ac interdum a, pulvinar ac massa. Nullam malesuada congue </p>
-                            <p><a href="{{asset('assets')}}/#" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
+                            <p><a href="{{asset('assets')}}/#" class="btn btn-primary btn-luxe-primary"> <i class="ti-angle-right"></i></a></p>
                         </div>
                     </div>
 
                     <div class="feature-full-2col">
                         <div class="f-hotel">
-                            <div class="image" style="background-image: url(images/hotel_feture_2.jpg);">
+                            <div class="image" style="background-image: url("{{asset('assets')}}")>
                                 <div class="descrip text-center">
-                                    <p><small>For as low as</small><span>$99/night</span></p>
+                                    <p><small>For as low as</small><span></span></p>
                                 </div>
                             </div>
                             <div class="desc">
@@ -171,7 +177,7 @@
                             </div>
                         </div>
                         <div class="f-hotel">
-                            <div class="image" style="background-image: url(images/hotel_feture_3.jpg);">
+                            <div class="image" style="background-image: url({{asset('assets')}}/images/banner3.jpg);">
                                 <div class="descrip text-center">
                                     <p><small>For as low as</small><span>$99/night</span></p>
                                 </div>
@@ -182,6 +188,7 @@
                                 <p><a href="{{asset('assets')}}/#" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -234,7 +241,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <img src="{{asset('assets')}}/images/tab_img_1.jpg" class="img-responsive" alt="Image">
+                                        <img src="{{asset('assets')}}/images/rest.jpeg" class="img-responsive" alt="Image">
                                     </div>
                                     <div class="col-md-6">
                                         <span class="super-heading-sm">World Class</span>
