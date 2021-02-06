@@ -59,6 +59,14 @@
                        <input type="text" name="price" class="form-control"  >
                    </div>
                    <div class="form-group">
+                       <label ><b>City</b></label>
+                       <input type="text" name="city" class="form-control"  >
+                   </div>
+                   <div class="form-group">
+                       <label ><b>Country</b></label>
+                       <input type="text" name="country" class="form-control"  >
+                   </div>
+                   <div class="form-group">
                        <label><b>Detail</b></label>
                        <textarea id="editor1" class="ckeditor"></textarea>
                    </div>

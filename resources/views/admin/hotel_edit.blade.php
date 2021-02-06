@@ -65,6 +65,16 @@
                     <input type="text" name="price" value="{{$data->price}}" class="form-control"
                            id="exampleInputPassword1">
                 </div>
+                <div class="form-group">
+                    <label><b>City</b></label>
+                    <input type="text" name="price" value="{{$data->city}}" class="form-control"
+                           id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+                    <label><b>Country</b></label>
+                    <input type="text" name="price" value="{{$data->country}}" class="form-control"
+                           id="exampleInputPassword1">
+                </div>
 
                 <div class="form-group">
                 <label><b>Detail</b></label>

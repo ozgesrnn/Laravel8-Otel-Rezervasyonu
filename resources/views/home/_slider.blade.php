@@ -1,60 +1,29 @@
-
-
-<aside id="fh5co-hero"  class="js-fullheight">
-    <div class="flexslider js-fullheight">
-        @foreach($slider as $rs)
-        <ul class="slides">
-            <li style="background-image: url({{asset('assets')}}/images/10.jpg);">
-                <div class="overlay-gradient"></div>
-                <div class="container">
-                    <div class="col-md-12 col-md-offset-0 text-center slider-text">
-                        <div class="slider-text-inner js-fullheight">
-
-                            <div class="desc">
-                                <p><span></span></p>
-                                <h2>{{$rs->title}}</h2>
-                                <p>
-                                    <a href="{{route('hotel',['id'=>$rs->id])}}" class="btn btn-primary btn-lg">Look Now</a>
-                                </p>
-                            </div>
-                        </div>
+<div class="banner_w3lspvt">
+    <div class="csslider infinity" id="slider1">
+        <input type="radio" name="slides" checked="checked" id="slides_1" />
+        <input type="radio" name="slides" id="slides_2" />
+        <input type="radio" name="slides" id="slides_3" />
+        <input type="radio" name="slides" id="slides_4" />
+        <ul class="banner_slide_bg">
+            @foreach($slider as $rs)
+                <li>
+                    <div class="container">
+                        <div class="w3ls_banner_txt">
+                            <p>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}</p>
+                            <h3 class="w3ls_pvt-title text-wh text-uppercase let">{{$rs->title}}</h3>
+                            <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="btn button-style mt-sm-5 mt-4">Oteli incele</a>
+                        </div >
                     </div>
-                </div>
-            </li>
+                </li>
             @endforeach
-            <li style="background-image: url(images/slider2.jpg);">
-                <div class="overlay-gradient"></div>
-                <div class="container">
-                    <div class="col-md-12 col-md-offset-0 text-center slider-text">
-                        <div class="slider-text-inner js-fullheight">
-                            <div class="desc">
-                                <p><span>Deluxe Hotel</span></p>
-                                <h2>Make Your Vacation Comfortable</h2>
-                                <p>
-                                    <a href="{{asset('assets')}}/#" class="btn btn-primary btn-lg">Book Now</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li style="background-image: img src(images/slider3.jpg);">
-                <div class="overlay-gradient"></div>
-                <div class="container">
-                    <div class="col-md-12 col-md-offset-0 text-center slider-text">
-                        <div class="slider-text-inner js-fullheight">
-                            <div class="desc">
-                                <p><span>Luxe Hotel</span></p>
-                                <h2>A Best Place To Enjoy Your Life</h2>
-                                <p>
-                                    <a href="{{asset('assets')}}/#" class="btn btn-primary btn-lg">Book Now</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
         </ul>
+        <div class="arrows">
+            <label for="slides_1"></label>
+            <label for="slides_2"></label>
+            <label for="slides_3"></label>
+            <label for="slides_4"></label>
+        </div>
     </div>
-</aside>
+</div>
+<!-- //banner -->
+</div>

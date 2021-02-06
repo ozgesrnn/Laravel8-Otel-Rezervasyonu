@@ -47,37 +47,34 @@
             </a>
         </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider">
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="">
+                <i class="far fa-fw fa-window-maximize"></i>
+                <span>Odalar</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="">
+                <i class="fas fa-fw fa-calendar"></i>
+                <span>Rezervasyon</span></a>
+        </li>
+
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{route('admin_message')}}">
-                <i class="fas fa-fw fa-hotel"></i>
+                <i class="far fa-fw fa-window-maximize"></i>
                 <span>Contact Message</span>
             </a>
         </li>
-        <!-- Nav Item - Pages Collapse Menu -->
+
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{asset('assets')}}/admin/#" data-toggle="collapse" data-target="#collapsePages"
-               aria-expanded="true" aria-controls="collapsePages">
-                <i class="fas fa-fw fa-file"></i>
-                <span>Rezervasyon</span>
-            </a>
-            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Login Screens:</h6>
-                    <a class="collapse-item" href="{{asset('assets')}}/admin/login.html">Login</a>
-                    <a class="collapse-item" href="{{asset('assets')}}/admin/register.html">Register</a>
-                    <a class="collapse-item" href="{{asset('assets')}}/admin/forgot-password.html">Forgot Password</a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">Other Pages:</h6>
-                    <a class="collapse-item" href="{{asset('assets')}}/admin/404.html">404 Page</a>
-                    <a class="collapse-item" href="{{asset('assets')}}/admin/blank.html">Blank Page</a>
-                </div>
-            </div>
+            <a class="nav-link" href="">
+                <i class="fas fa-fw fa-pen"></i>
+                <span>Review</span></a>
         </li>
 
-        <!-- Nav Item - Charts -->
+
         <li class="nav-item">
             <a class="nav-link" href="{{route('admin_setting_edit')}}">
                 <i class="fas fa-fw fa-cog"></i>
