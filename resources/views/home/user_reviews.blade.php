@@ -41,10 +41,12 @@
                                             </thead>
 
                                             <tbody>
+                                            @include('home.message')
                                             @foreach($datalist as $rs )
                                                 <tr>
                                                     <td>{{ $rs->id }}</td>
-                                                    <td>{{ $rs->hotel->title }}</td>
+                                                    <td> <a href="{{route('hotel', ['id' => $rs->hotel->id, 'slug' => $rs->hotel->slug])}}" target="_blank">
+                                                            {{$rs->hotel->title}}</a></td>
                                                     <td>{{ $rs->subject }}</td>
                                                     <td>{{ $rs->review }}</td>
                                                     <td>{{ $rs->rate}}</td>

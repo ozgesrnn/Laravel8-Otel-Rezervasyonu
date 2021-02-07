@@ -47,7 +47,10 @@
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
     <script src="{{asset('assets')}}/js/respond.min.js"></script>
-    <![endif]-->
+    <script src="{{asset('assets')}}/js/custom.js"></script>
 
+
+    <![endif]-->
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 </head>
 <body>

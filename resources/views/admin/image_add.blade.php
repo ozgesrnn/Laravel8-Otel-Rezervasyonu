@@ -28,7 +28,7 @@
                    </div>
                </div>
                <div class="card-footer">
-                   <button type="submit" class="btn btn-primary">Image Ekle</button>
+                   <button type="submit"  class="btn btn-primary">Image Ekle</button>
                </div>
                <form>
                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -41,19 +41,17 @@
                        </tr>
                        </thead>
                        <tbody>
-                       @foreach( $images as $rs )
-                           <td>{{ $rs -> id }}</td>
-                           <td>{{ $rs -> title }}</td>
+
+                           <td>{{ $data -> id }}</td>
+                           <td>{{ $data -> title }}</td>
                            <td>
-                               @if ($rs->image)
-                                   <img src="{{Storage::url($rs->image)}}" height="60" alt="">
+                               @if ($data->image)
+                                   <img src="{{Storage::url($data->image)}}" height="60" alt="">
                                @endif
                            </td>
                            <td>
-                               <a href="{{route('admin_image_delete',['id' => $rs->id,'hotel_id'=>$data->id])}}" title="Sil" class="btn btn-sm btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')"><i class="fa fa-times" ></i></a>
+                               <a href="{{route('admin_image_delete',['id' => $data->id,'hotel_id'=>$data->id])}}" title="Sil" class="btn btn-sm btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')"><i class="fa fa-times" ></i></a>
                            </td>
-                           </tr>
-                       @endforeach
                        </tbody>
                </table>
                </form>

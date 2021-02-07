@@ -1,10 +1,11 @@
 @extends('layouts.admin')
 
-@section('title', 'Contact Messages List')
+@section('title', 'Review List')
 
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
+            @include('home.message')
             <h6 class="m-0 font-weight-bold float-right text-primary"><strong>{{$datalist->count()}}</strong> Yorum Bulundu.</h6>
 
         </div>
@@ -19,14 +20,9 @@
                         <th>Subject</th>
                         <th>Review</th>
                         <th>Rate</th>
-                        <th>Action</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th style="" colspan="3">İşlemler</th>
                     </tr>
 
-
-
-                        <th style="" colspan="3">İşlemler</th>
 
 
                     @foreach( $datalist as $rs )
@@ -35,7 +31,8 @@
 
                         <td>{{ $rs->id }}</td>
                         <td>{{ $rs->user_id }}</td>
-                        <td>{{ $rs->hotel->title }}</td>
+                        <td> <a href="{{route('hotel', ['id' => $rs->hotel->id, 'slug' => $rs->hotel->slug])}}" target="_blank">
+                                {{$rs->hotel->title}}</a></td>
                         <td>{{ $rs->subject }}</td>
                         <td>{{ $rs->review }}</td>
                         <td>{{ $rs->rate}}</td>

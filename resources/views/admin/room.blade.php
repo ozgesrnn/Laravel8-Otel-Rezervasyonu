@@ -26,7 +26,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach( $datalist as $rs )
+                    @foreach( $ as $rs )
                         <p></p>
                     <tr>
                         <td>{{ $rs -> hotel_id }}</td>

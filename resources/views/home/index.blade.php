@@ -9,75 +9,20 @@
 @section('keywords', $setting->keywords)
 
 
-
 @section('content')
+    @include('home._slider')
 
-    <aside id="fh5co-hero" class="js-fullheight">
-        <div class="flexslider js-fullheight">
-            <ul class="slides">
-                <li style="background-image: url({{asset('assets')}}/images/10.jpg);">
-                    <div class="overlay-gradient"></div>
-                    <div class="container">
-                        <div class="col-md-12 col-md-offset-0 text-center slider-text">
-                            <div class="slider-text-inner js-fullheight">
-                                <div class="desc">
-                                    <p><span>Bora Hotel</span></p>
-                                    <h2>Reserve Room for Family Vacation</h2>
-                                    <p>
-                                        <a href="#" class="btn btn-primary btn-lg">Book Now</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url({{asset('assets')}}/images/11.jpg);">
-                    <div class="overlay-gradient"></div>
-                    <div class="container">
-                        <div class="col-md-12 col-md-offset-0 text-center slider-text">
-                            <div class="slider-text-inner js-fullheight">
-                                <div class="desc">
-                                    <p><span>Deluxe Hotel</span></p>
-                                    <h2>Make Your Vacation Comfortable</h2>
-                                    <p>
-                                        <a href="#" class="btn btn-primary btn-lg">Look Now</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url({{asset('assets')}}/images/12.jpg);">
-                    <div class="overlay-gradient"></div>
-                    <div class="container">
-                        <div class="col-md-12 col-md-offset-0 text-center slider-text">
-                            <div class="slider-text-inner js-fullheight">
-                                <div class="desc">
-                                    <p><span>Luxe Hotel</span></p>
-                                    <h2>A Best Place To Enjoy Your Life</h2>
-                                    <p>
-                                        <a href="" class="btn btn-primary btn-lg"></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
 
-            </ul>
-        </div>
-    </aside>
     <div class="wrap">
         <div class="container">
             <div class="row">
                 <div id="availability">
-
                     <div class="a-col">
                         <section>
                             <div class="a-col-search">
                                 <div class="input-field">
                                     <label>Search</label>
-                                    <form action="" method="post">
+                                    <form action="{{route('gethotel')}}" method="post">
                                         @csrf
                                         @livewire('search')
                                     </form>
@@ -152,68 +97,75 @@
             </div>
 
             <div class="row">
-                @foreach($featured as $rs)
-                    <div class="feature-full-1col">
-                        <div href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="hotel-grid">
-                            <img src="{{Storage::url($rs->image)}}" height="300px">
-                            <div class="descrip text-center">
-                                <p><small>{{$rs->city}}</small><span>{{$rs->price}} TL</span></p>
-                                <a class="book-now text-center"
-                                   href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}"><i
-                                        class="ti-calendar"></i> İncele</a>
-                            </div>
-                        </div>
-                        <div class="desc">
-                            <h3><a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">{{$rs->title}}</a>
-                            </h3>
-                            <p><a href="{{asset('assets')}}/#" class="btn btn-primary btn-luxe-primary"><i
-                                        class="ti-angle-right"></i></a></p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-
-    <div id="hotel-facilities">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title text-center">
-                        <h2>Hotel Fırsatları</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-content-container">
-                <div class="tab-content active show" data-tab-content="tab1">
+                <div id="fh5co-hotel-section">
                     <div class="container">
                         <div class="row">
-                            @foreach($firsat as $rs)
-                                <div class="feature-full-1col">
-                                    <div href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}"
-                                         class="hotel-grid">
-                                        <img src="{{Storage::url($rs->image)}}" height="300px">
-                                        <div class="descrip text-center">
-                                            <p><small>{{$rs->city}}</small><span>{{$rs->price}} TL</span></p>
-                                            <a class="book-now text-center"
-                                               href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}"><i
-                                                    class="ti-calendar"></i> İncele</a>
+                            @foreach($featured as $rs)
+                                <div class="col-md-4">
+                                    <div class="hotel-content">
+                                        <div href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="hotel-grid">
+                                            <img src="{{Storage::url($rs->image)}}" height="300px">
+                                            <div class="price"><small>{{$rs->city}}</small><span>{{$rs->price}} TL</span></div>
+                                            <a class="book-now text-center" href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}"><i class="ti-calendar"></i> İncele</a>
                                         </div>
-                                    </div>
-                                    <div class="desc">
-                                        <h3>
-                                            <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">{{$rs->title}}</a>
-                                        </h3>
-                                        <p><a href="{{asset('assets')}}/#" class="btn btn-primary btn-luxe-primary"><i
-                                                    class="ti-angle-right"></i></a></p>
+                                        <div class="desc">
+                                            <h3><a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">{{$rs->title}}</a></h3>
+
+                                            <ul class="style-lists">
+                                                <li>{{$rs->city}}</li>
+                                                <li>{{$rs->country}}</li>
+                                                <li>{{$rs->address}} </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             @endforeach
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="hotel-facilities">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2>Fırsat Oteller</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content-container">
+                <div class="tab-content active show" data-tab-content="tab1">
+                    <div class="container">
+                        <div class="row">
+                            @foreach($firsat as $rs)
+                                <div class="col-md-6">
+                                    <div class="hotel-content">
+                                        <div href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="hotel-grid">
+                                            <img src="{{Storage::url($rs->image)}}" height="300px">
+                                            <br>
+                                            <div class="price"><small></small><span></span></div>
+                                            </div>
+                                        <div class="desc">
+                                            <h3><a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">{{$rs->title}}</a></h3>
 
+                                            <ul class="style-lists">
+                                                <li>{{$rs->city}}</li>
+                                                <li>{{$rs->country}}</li>
+                                            </ul>
+                                            <a class="book-now text-center" href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}"><i class="ti-calendar"></i> İncele</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
                 <div id="testimonial">
                     <div class="container">
@@ -303,7 +255,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+    <!-- plus a jQuery UI theme, here I use "flick" -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
 
 @endsection
 

@@ -21,6 +21,7 @@
     <link href="{{asset('assets')}}/admin/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="{{asset('assets')}}/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     @yield('css')
     @yield('javascript')
 </head>

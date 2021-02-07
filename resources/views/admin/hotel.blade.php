@@ -54,7 +54,7 @@
                                 <img src="{{asset('assets/images')}}/image-gallery.png" height="30"></a> </td>
 
 
-                        <td><a href="" onclick="return !window.open(this.href, '','top=50 left=100 width=1100, height=700)')">
+                        <td><a href="{{route('admin_room_add' , ['hotel_id' => $rs -> id])}}" onclick="return !window.open(this.href, '','top=50 left=100 width=1100, height=700)')">
                                 <img src="{{asset('assets/images')}}/living-room.png" height="30"></a> </td>
 
                         <td>{{ $rs -> status }}</td>

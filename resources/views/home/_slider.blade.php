@@ -1,29 +1,26 @@
-<div class="banner_w3lspvt">
-    <div class="csslider infinity" id="slider1">
-        <input type="radio" name="slides" checked="checked" id="slides_1" />
-        <input type="radio" name="slides" id="slides_2" />
-        <input type="radio" name="slides" id="slides_3" />
-        <input type="radio" name="slides" id="slides_4" />
-        <ul class="banner_slide_bg">
+<aside id="fh5co-hero" class="js-fullheight">
+    <div class="flexslider js-fullheight">
+        <ul class="slides">
             @foreach($slider as $rs)
-                <li>
-                    <div class="container">
-                        <div class="w3ls_banner_txt">
-                            <p>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}</p>
-                            <h3 class="w3ls_pvt-title text-wh text-uppercase let">{{$rs->title}}</h3>
-                            <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="btn button-style mt-sm-5 mt-4">Oteli incele</a>
-                        </div >
+            <li>
+                <img src="{{Storage::url($rs->image)}}" height="300px">
+                <div class="overlay-gradient"></div>
+                <div class="container">
+                    <div class="col-md-12 col-md-offset-0 text-center slider-text">
+                        <div class="slider-text-inner js-fullheight">
+                            <div class="desc">
+                                <p><span>{{$rs->title}}</span></p>
+                                <p>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}</p>
+                                    <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}"  class="btn btn-primary btn-lg">Oteli İncele</a>
+                            </div>
+                        </div>
                     </div>
-                </li>
+                </div>
+            </li>
             @endforeach
         </ul>
-        <div class="arrows">
-            <label for="slides_1"></label>
-            <label for="slides_2"></label>
-            <label for="slides_3"></label>
-            <label for="slides_4"></label>
-        </div>
     </div>
-</div>
-<!-- //banner -->
-</div>
+</aside>
+
+
+

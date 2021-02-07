@@ -18,11 +18,11 @@
 <div class="container-fluid">
 
     <h1 class="h3 mb-4 text-gray-800">Review Edit</h1>
-
+    @include('home.message')
 </div>
    <div class="card-body">
 
-       <form role="form" action="{{ route('admin_rezervasyon_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+       <form role="form" action="{{ route('admin_review_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                @csrf
                <div class="card-body">
                    <div class="table-responsive">
@@ -85,10 +85,6 @@
                                </div></td>
                            </tr>
                        </table>
-
-
-
-
            </form>
 
 

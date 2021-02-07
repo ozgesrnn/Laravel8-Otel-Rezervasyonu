@@ -69,7 +69,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{route('admin_review')}}">
                 <i class="fas fa-fw fa-pen"></i>
                 <span>Review</span></a>
         </li>
