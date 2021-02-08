@@ -29,6 +29,7 @@
                                                 <div class="table-responsive p-3">
                                                     <table class="table align-items-center table-flush table-hover" id="dataTableHover">
                                                         <thead class="thead-light">
+
                                                         <tr>
                                                             <th>Id</th>
                                                             <th>User</th>
@@ -47,8 +48,11 @@
                                                         </tr>
                                                         </thead>
 
-                                                        <tbody>
                                                         @foreach($datalist as $rs )
+                                                            @php
+                                                                $total=0;
+                                                                $total= $rs ->room->price* $rs->adet;
+                                                            @endphp
                                                             <tr>
                                                                 <td>{{ $rs -> id }}</td>
                                                                 <td>{{ $rs -> user_id }}</td>

@@ -156,61 +156,23 @@
             </div>
         </div>
     </div>
-    <div class="wrap">
-        <div class="container">
-            <div class="row">
-                <div id="availability">
-                    <div class="a-col">
-                        <section>
-                            <div class="a-col-search">
-                                <div class="input-field">
-                                    <label>Search</label>
-                                    <form action="" method="post">
-                                        @csrf
-                                        @livewire('search')
-                                    </form>
-                                    @section('footerjs')
-                                        @livewireScripts
-                                    @endsection
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="a-col alternate">
-                        <div class="input-field">
-                            <label for="date-start">Check In</label>
-                            <input type="text" class="form-control" id="date-start"/>
-                        </div>
-                    </div>
-                    <div class="a-col alternate">
-                        <div class="input-field">
-                            <label for="date-end">Check Out</label>
-                            <input type="text" class="form-control" id="date-end"/>
-                        </div>
-                    </div>
-                    <div class="a-col action">
-                        <a href="{{route('user_reservation_store')}}">
-                            <span>Ara</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <div class="col-sm-12 col-md-8">
     <section class="contact py-5" id="contact">
-        <div class="container py-xl-5 py-lg-3">
+        <div class="container py-md-12 py-lg-8 ">
             <h2 class="w3-center">{{$data->title}}</h2>
-
-
             <div class="w3-content w3-display-container">
-                <img class="mySlides" src="{{ Storage::url($data->image) }}" style="width:100%">
+                <img class="mySlides" src="{{ Storage::url($data->image) }}" style="height:500px">
                 @foreach($datalist as $rs)
-                    <img class="mySlides" src="{{ Storage::url($rs->image) }}" style="width:100%">
+                    <img class="mySlides" src="{{ Storage::url($rs->image) }}" style="height:500px">
                 @endforeach
 
                 <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
             </div>
+        </div>
+    </section>
+    </div>
 
             <script>
                 var slideIndex = 1;
@@ -235,6 +197,70 @@
                     x[slideIndex - 1].style.display = "block";
                 }
             </script>
+    <!-- Reservation form -->
+    <section id="reservation-form" class="mt50 clearfix">
+        <div class="col-sm-12 col-md-4">
+            <form class="reservation-vertical clearfix" role="form" method="post" action="" name="reservationform" id="reservationform">
+                <h2 class="lined-heading"><span>Reservation</span></h2>
+                <div class="price">
+                    <h4>{{ $data->title }}</h4>
+                    &dollar; {{$data->price}},-<span> a night</span></div>
+                <div id="message"></div>
+                <!-- Error message display -->
+                <div class="form-group">
+                    <label for="email" accesskey="E">E-mail</label>
+                    <input name="email" type="text" id="email" value="" class="form-control" placeholder="Please enter your E-mail"/>
+                </div>
+                <div class="form-group">
+                    <select class="hidden" name="room" id="room">
+                        <option selected="selected"></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="checkin">Check-in</label>
+                    <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-In is from 11:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                    <i class="fa fa-calendar infield"></i>
+                    <input name="checkin" type="text" id="checkin" value="" class="form-control" placeholder="Check-in"/>
+                </div>
+                <div class="form-group">
+                    <label for="checkout">Check-out</label>
+                    <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-out is from 12:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                    <i class="fa fa-calendar infield"></i>
+                    <input name="checkout" type="text" id="checkout" value="" class="form-control" placeholder="Check-out"/>
+                </div>
+                <div class="form-group">
+                    <div class="guests-select">
+                        <label>Guests</label>
+                        <i class="fa fa-user infield"></i>
+                        <div class="total form-control" id="test">1</div>
+                        <div class="guests">
+                            <div class="form-group adults">
+                                <label for="adults">Adults</label>
+                                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="+18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                                <select name="adults" id="adults" class="form-control">
+                                    <option value="1">1 adult</option>
+                                    <option value="2">2 adults</option>
+                                    <option value="3">3 adults</option>
+                                </select>
+                            </div>
+                            <div class="form-group children">
+                                <label for="children">Children</label>
+                                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="0 till 18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                                <select name="children" id="children" class="form-control">
+                                    <option value="0">0 children</option>
+                                    <option value="1">1 child</option>
+                                    <option value="2">2 children</option>
+                                    <option value="3">3 children</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-default button-save btn-block">Save</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+            </form>
+        </div>
+    </section>
             <br><br>
             <!-- Room Content -->
             <section>
@@ -257,9 +283,11 @@
                                 </tr>
                                 </tbody>
                             </table>
+
+
                             <p class="mt50"> </div>
                         <div class="col-sm-5 mt50">
-                            <h2 class="lined-heading"><span></span></h2>
+                            <h2 class="lined-heading"><span>Diğer</span></h2>
 
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs">
@@ -272,21 +300,31 @@
                                 <div class="tab-pane fade in active" id="overview">
                                     <p>{!! $data->detail !!} </p>
                                 </div>
+
                                 <div class="tab-pane fade" id="facilities">  @if ($data->image)
                                         <img src="{{ Storage::url($data->image) }}" height="200px" alt="">
-                                    @endif</div>
-                                <div class="tab-pane fade" id="extra"><div class="col-md-12">
+                                    @endif
+                                </div>
+                            <div class="tab-pane fade" id="facilities">
+                                <div class="comment-post">
+                                    @include('home.message')
+                                    <form action="{{route('sendreview',['id'=>$data->id,'slug'=>$data->slug])}}" method="post" class="comment-form" name="review-form">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </div>
+                                <div class="tab-pane fade" id="extra">
+                                    <div class="col-md-12">
                                             <h4 class="text-uppercase"></h4>
                                             @livewire('review', ['id' => $data->id])
-                                        </div></div>
+                                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-        </div>
-
     </section>
 
 

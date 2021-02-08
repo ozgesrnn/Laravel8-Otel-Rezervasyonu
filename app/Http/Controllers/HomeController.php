@@ -28,7 +28,7 @@ class HomeController extends Controller
         return Setting::first();
     }
 
-    public function rezervasyon($id,$slug)
+    public function reservation($id,$slug)
     {
        echo "Rezervasyon <br>" ;
        $data = Hotel::find($id);
@@ -42,8 +42,8 @@ class HomeController extends Controller
     {
        $setting = Setting::first();
        $slider = Hotel::select('id','title', 'image','category_id','city','slug','address','country')->limit(4)->inRandomOrder()->get();
-       $firsat = Hotel::select('id','title', 'image','category_id','city','slug','address','country')->limit(4)->orderByDesc('id')->get();
-       $featured = Hotel::select('id','title', 'image','category_id','city','slug','address','country')->limit(4)->inRandomOrder()->get();
+       $firsat = Hotel::select('id','title', 'image','category_id','city','slug','address','country')->limit(6)->orderByDesc('id')->get();
+       $featured = Hotel::select('id','title', 'image','category_id','city','slug','address','country')->limit(6)->inRandomOrder()->get();
        #print_r($slider);
          #exit();
 
@@ -96,6 +96,36 @@ class HomeController extends Controller
         $data = Category::find($id);
         return view('home.category_hotels', ['data' => $data,  'datalist' => $datalist]);
     }
+    public function sendmessage(Request $request)
+    {
+        $data = new Message();
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->phone = $request->input('phone');
+        $data->subject = $request->input('subject');
+        $data->message = $request->input('message');
+        $data->save();
+
+        return redirect()->route('contact')->with('success', 'Mesajınız başarılı bir şekilde kaydedilmiştir!');
+    }
+
+    public function sendreview(Request $request,$id)
+    {
+        $data = new Review;
+
+        $data->user_id = Auth::id();
+        $hotel = Hotel::find($id);
+        $data->hotel_id=$id;
+        $data->subject = $request->input('subject');
+        $data->review = $request->input('review');
+        $data->IP = $_SERVER['REMOTE_ADDR'];
+        $data->rate = $request->input('rate');
+
+        $data->save();
+
+        return redirect()->route('hotel',['id'=>$hotel->id,'slug'=>$hotel->slug])->with('success','Yourumunuz kaydedilmiştir');
+    }
+
     public function login()
     {
         return view('admin.login');

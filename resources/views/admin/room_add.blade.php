@@ -11,10 +11,10 @@
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h1 class="h3 mb-4 text-gray-800">Hotel: {{$data->title}}</h1>
+        <h1 class="h3 mb-4 text-gray-800">Hotel: {{$datalist->title}}</h1>
     </div>
     <div class="card-body">
-        <form role="form" action="{{route('admin_room_store',['hotel_id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+        <form role="form" action="{{route('admin_room_store',['hotel_id'=>$datalist->id])}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
 

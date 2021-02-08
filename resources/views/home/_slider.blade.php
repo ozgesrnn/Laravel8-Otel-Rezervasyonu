@@ -11,7 +11,7 @@
                             <div class="desc">
                                 <p><span>{{$rs->title}}</span></p>
                                 <p>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}</p>
-                                    <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}"  class="btn btn-primary btn-lg">Oteli İncele</a>
+                                    <a href="{{route('hotel',['id' => $rs->id, 'slug' => $rs->slug]  )}}"  class="btn btn-primary btn-lg">Oteli İncele</a>
                             </div>
                         </div>
                     </div>

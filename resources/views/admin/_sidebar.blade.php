@@ -48,7 +48,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="">
+            <a class="nav-link collapsed" href="{{route('admin_room')}}">
                 <i class="far fa-fw fa-window-maximize"></i>
                 <span>Odalar</span>
             </a>

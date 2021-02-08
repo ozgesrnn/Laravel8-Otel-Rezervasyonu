@@ -48,6 +48,38 @@
     <!--[if lt IE 9]>
     <script src="{{asset('assets')}}/js/respond.min.js"></script>
     <script src="{{asset('assets')}}/js/custom.js"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/animate.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/owl.carousel.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/owl.theme.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/prettyPhoto.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/smoothness/jquery-ui-1.10.4.custom.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/theme.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/colors/blue.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/responsive.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
+
+    <!-- Javascripts -->
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.forms.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/waypoints.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.gmap.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/custom.js"></script>
 
 
     <![endif]-->

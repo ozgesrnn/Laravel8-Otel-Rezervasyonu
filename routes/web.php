@@ -33,11 +33,13 @@ Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/fag', [HomeController::class, 'fag'])->name('fag');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
+Route::post('/sendreview', [HomeController::class, 'sendreview'])->name('sendreview');
 Route::get('/hotel/{id}', [HomeController::class, 'hotel'])->name('hotel');
 Route::get( '/categoryhotels/{id}/{slug}', [HomeController::class, 'categoryhotels'])->name('categoryhotels');
 Route::post('/gethotel', [HomeController::class, 'gethotel'])->name('gethotel');
 Route::get('/hotellist/{search}', [HomeController::class, 'hotellist'])->name('hotellist');
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
+Route::get('/reservation', [HomeController::class, 'reservation'])->name('reservation');
 
 
 
@@ -69,9 +71,10 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     #Room
     Route::prefix('room')->group(function () {
 
-        Route::get('create/{hotel_id}', [\App\Http\Controllers\Admin\RoomController::class, 'create'])->name('admin_room_add');
-        Route::get('edit/{hotel_id}', [\App\Http\Controllers\Admin\RoomController::class, 'edit'])->name('admin_room_edit');
-        Route::post('store/{hotel_id}', [\App\Http\Controllers\Admin\RoomController::class, 'store'])->name('admin_room_store');
+        Route::get('/', [\App\Http\Controllers\Admin\RoomController::class, 'index'])->name('admin_room');
+        Route::get('create/{hotel_id}/{id}', [\App\Http\Controllers\Admin\RoomController::class, 'create'])->name('admin_room_add');
+        Route::get('edit/{hotel_id}/{id}', [\App\Http\Controllers\Admin\RoomController::class, 'edit'])->name('admin_room_edit');
+        Route::post('store/{hotel_id}/{id}', [\App\Http\Controllers\Admin\RoomController::class, 'store'])->name('admin_room_store');
         Route::get('delete/{id}/{hotel_id}', [\App\Http\Controllers\Admin\RoomController::class, 'destroy'])->name('admin_room_delete');
         Route::get('show', [\App\Http\Controllers\Admin\RoomController::class, 'show'])->name('admin_room_show');
     });
@@ -127,7 +130,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::prefix('reservation')->group(function () {
 
         Route::get('/', [\App\Http\Controllers\ReservationController::class, 'index'])->name('user_reservations');
-        Route::get('create', [\App\Http\Controllers\ReservationController::class, 'create'])->name('user_reservation_add');
+        Route::post('create', [\App\Http\Controllers\ReservationController::class, 'create'])->name('user_reservation_add');
         Route::post('store', [\App\Http\Controllers\ReservationController::class, 'store'])->name('user_reservation_store');
         Route::get('edit/{id}', [\App\Http\Controllers\ReservationController::class, 'edit'])->name('user_reservation_edit');
         Route::post('update/{id}', [\App\Http\Controllers\ReservationController::class, 'update'])->name('user_reservation_update');

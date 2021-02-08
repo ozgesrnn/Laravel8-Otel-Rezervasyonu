@@ -4,7 +4,7 @@
 
 @extends('home.homepage')
 
-@section('title' , $setting->title . 'Anasayfa' )
+@section('title' , $setting->title )
 @section('description',  $setting->description)
 @section('keywords', $setting->keywords)
 
@@ -105,7 +105,9 @@
                                     <div class="hotel-content">
                                         <div href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="hotel-grid">
                                             <img src="{{Storage::url($rs->image)}}" height="300px">
-                                            <div class="price"><small>{{$rs->city}}</small><span>{{$rs->price}} TL</span></div>
+                                            <div class="price"><small>{{$rs->city}}</small>
+                                                 <span>{{$rs->price}} TL</span>
+                                            </div>
                                             <a class="book-now text-center" href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}"><i class="ti-calendar"></i> İncele</a>
                                         </div>
                                         <div class="desc">
