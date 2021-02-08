@@ -13,51 +13,57 @@
         <div class="card-header py-3">
             <h1 class="h3 mb-4 text-gray-800">Hotel: {{$data->title}}</h1>
         </div>
-   <div class="card-body">
+        <div class="card-body">
+            <form role="form" action="{{route('admin_image_store',['hotel_id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="card-body">
 
-           <form role="form" action="{{route('admin_image_store',['hotel_id'=>$data->id])}}" method="post" enctype="multipart/form-data">
-               @csrf
-               <div class="card-body">
-                   <div class="form-group">
-                       <label>Başlık</label>
-                       <input type="text" id="title" name="title" class="form-control">
-                   </div>
-                   <div class="form-group">
-                       <label>Image</label>
-                       <input type="file"  name="image" class="form-control">
-                   </div>
-               </div>
-               <div class="card-footer">
-                   <button type="submit"  class="btn btn-primary">Image Ekle</button>
-               </div>
-               <form>
-                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                       <thead>
-                       <tr>
-                           <th>Id</th>
-                           <th>Başlık</th>
-                           <th>Image</th>
-                           <th>İşlemler</th>
-                       </tr>
-                       </thead>
-                       <tbody>
+                    <div class="form-group">
+                        <label >Title</label>
+                        <input type="text" name="title" class="form-control" >
+                    </div>
 
-                           <td>{{ $data -> id }}</td>
-                           <td>{{ $data -> title }}</td>
-                           <td>
-                               @if ($data->image)
-                                   <img src="{{Storage::url($data->image)}}" height="60" alt="">
-                               @endif
-                           </td>
-                           <td>
-                               <a href="{{route('admin_image_delete',['id' => $data->id,'hotel_id'=>$data->id])}}" title="Sil" class="btn btn-sm btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')"><i class="fa fa-times" ></i></a>
-                           </td>
-                       </tbody>
-               </table>
-               </form>
-           </form>
-   </div>
+                    <div class="form-group">
+                        <label>İmage</label>
+                        <input type="file" name="image" class="form-control" >
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">Resim Ekle</button>
+                </div>
+
+
+                <div class="table-responsive p-3">
+                    <table class="table align-items-center table-flush table-hover" id="dataTableHover">
+                        <thead class="thead-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>İşlemler</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($images as $rs )
+                            <tr>
+                                <td>{{$rs->id}}</td>
+                                <td>{{$rs->title}}</td>
+                                <td>
+                                    @if ($data->image)
+                                        <img src="{{ Storage::url($data->image) }}" height="30" alt="">
+                                    @endif
+                                </td>
+                                <td><a href="{{route('admin_image_delete',['id' => $rs->id,'hotel_id' => $data->id])}}" onclick="return confirm('Delete! Are you sure? ')"><i class="fa fa-times" ></i></a></td>
+
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
     </div>
+
+
 </body>
 </html>
 

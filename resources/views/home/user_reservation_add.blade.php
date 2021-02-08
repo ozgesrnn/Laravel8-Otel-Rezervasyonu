@@ -1,9 +1,10 @@
-@extends('layouts.home')
 @php
-$setting=\App\Http\Controllers\HomeController::getsetting();
+    $setting = \App\Http\Controllers\HomeController::getsetting()
 @endphp
 
-@section('title', 'My rezervasyon '.$setting->title)
+@extends('home.homepage')
+
+@section('title' , 'Rezervasyon')
 
 @section('content')
 
@@ -48,26 +49,26 @@ $setting=\App\Http\Controllers\HomeController::getsetting();
 
                                                         <tbody>
                                                         @foreach($datalist as $rs )
-                                                        <tr>
-                                                            <td>{{ $rs -> id }}</td>
-                                                            <td>{{ $rs -> user_id }}</td>
-                                                            <td>{{ $rs -> hotel_id }}</td>
-                                                            <td>{{ $rs -> room -> title }}</td>
-                                                            <td>{{ $rs->name }}</td>
-                                                            <td>{{ $rs->surname }}</td>
-                                                            <td>{{ $rs->phone }}</td>
-                                                            <td>{{ $rs->total }}</td>
-                                                            <td>{{ $rs->checkin}}</td>
-                                                            <td>{{ $rs->checkout}}</td>
-                                                            <td>{{ $rs->days}}</td>
-                                                            <td>{{ $rs->note}}</td>
-                                                            <td>{{ $rs->status }}</td>
+                                                            <tr>
+                                                                <td>{{ $rs -> id }}</td>
+                                                                <td>{{ $rs -> user_id }}</td>
+                                                                <td>{{ $rs -> hotel_id }}</td>
+                                                                <td>{{ $rs -> room -> title }}</td>
+                                                                <td>{{ $rs->name }}</td>
+                                                                <td>{{ $rs->surname }}</td>
+                                                                <td>{{ $rs->phone }}</td>
+                                                                <td>{{ $rs->total }}</td>
+                                                                <td>{{ $rs->checkin}}</td>
+                                                                <td>{{ $rs->checkout}}</td>
+                                                                <td>{{ $rs->days}}</td>
+                                                                <td>{{ $rs->note}}</td>
+                                                                <td>{{ $rs->status }}</td>
 
 
-                                                            <td><a href="{{route('user_rezerve_delete',['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure? ')">
-                                                                    <img src="{{asset('assets/admin/img')}}/delete.png" height="26"></a></td>
+                                                                <td><a href="{{route('user_reservation_delete',['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure? ')">
+                                                                        <img src="{{asset('assets/admin/img')}}/delete.png" height="26"></a></td>
 
-                                                        </tr>
+                                                            </tr>
                                                         </tbody>
                                                         @endforeach
                                                     </table>
