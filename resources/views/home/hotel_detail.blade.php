@@ -290,10 +290,11 @@
                     </div>
                 </div>
                 <div class="a-col action">
-                <a href="{{route('user_reservations',['hotel_id' => $data->id, 'id' => $data->id])}}"">
+                <a href="{{route('user_reservations',['hotel_id' => $data->id, 'id' => $data->id])}}">
                     <span>Book Now</span>
 
                 </a>
+                </div>
             </form>
         </div>
     </section>

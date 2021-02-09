@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dd688bee-754e-4c34-87f3-514f4e3d9d00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/user_reservation_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_reservation_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +282,7 @@
       <workItem from="1612674792931" duration="13602000" />
       <workItem from="1612695919647" duration="26576000" />
       <workItem from="1612772089683" duration="31321000" />
-      <workItem from="1612882876708" duration="12319000" />
+      <workItem from="1612882876708" duration="14527000" />
     </task>
     <task id="LOCAL-00001" summary="index changed">
       <created>1607198732025</created>
@@ -369,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612905221122</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Hatalar düzeltildi.Rezervasyon ödeme işlemleri">
+      <created>1612906625033</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612906625033</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +389,8 @@
     <MESSAGE value="Hatalar düzeltildi.Admin/Room edit,delete işlemleri gerçekleştirildi." />
     <MESSAGE value="Hatalar düzeltildi.Rezervasyon controller ve user  işlemleri gerçekleştirildi." />
     <MESSAGE value="Hatalar düzeltildi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hatalar düzeltildi." />
+    <MESSAGE value="Hatalar düzeltildi.Rezervasyon ödeme işlemleri" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hatalar düzeltildi.Rezervasyon ödeme işlemleri" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1612700199192">
@@ -406,10 +413,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="547" y="502" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1536.824@0.0.1536.824" timestamp="1608541782207" />
-    <state x="535" y="0" key="CommitChangelistDialog2" timestamp="1612905220613">
+    <state x="535" y="0" key="CommitChangelistDialog2" timestamp="1612906624544">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="535" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612905220613" />
+    <state x="535" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612906624544" />
     <state x="93" y="93" width="1320" height="638" key="DiffContextDialog" timestamp="1612692506897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -442,10 +449,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1612100569412" />
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612905226935">
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612906631016">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612905226935" />
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612906631016" />
     <state x="643" y="299" width="312" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1612114708479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

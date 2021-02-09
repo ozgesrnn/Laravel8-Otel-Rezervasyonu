@@ -32,7 +32,7 @@
                 <div id="map" class="fh5co-map">
 
                     <div class="col-md-6">
-                        <form class="main_form" action="" method="post">
+                        <form class="main_form" action="{{route('user_reservation_store')}}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-md-12">
@@ -68,23 +68,18 @@
                                                                     <label>Checkout</label>
                                                                     <input class="form-control"  type="date" name="checkout">
                                                                 </div>
-
-                                                                <div class="col-md-6 ">
-                                                                    <label>Kişi Sayısı</label>
-                                                                <td><br><input type="number" style="width: 235px; height:45px;" value="adet" name="adet" id="adet"/></td>
-                                                                </div>
+                                                         <div class="col-md-6 ">
+                                                             <label>Kişi Sayısı</label>
+                                                             <td><br><input type="number" style="width: 235px; height:45px;" value="adet" name="adet" id="adet"/></td>
+                                                         </div>
                                                          <div class=" col-md-6">
                                                              <label>Total Price</label>
                                                              <input class="form-control" placeholder="total number" type="number" name="total">
                                                          </div>
-                                                         <div class=" col-md-6">
-                                                             <label>Total Price</label>
-                                                             <input class="form-control" value="" placeholder="total" type="text" name="total">
-                                                         </div>
+
                                                             </div>
                                                          <div class="container">
                                                              <div class="row">
-                                                                     <h3 class="tittle text-left text-bl font-weight-bold">Kart Bilgileri</h3>
                                                                  <div class="col-md-6">
                                                                      <div class=" col-md-6 ">
                                                                          <input class="form-control" value="{{Auth::user()->name}}" placeholder="Card Name" type="text" name="cardname">
