@@ -21,7 +21,7 @@
                     <div class="comment-top mt-5">
 
                         <div class="comment-bottom mobamuinfo_mail_grid_right">
-                            <form action="{{route('sendrezerve',['id'=>$room->id])}}" method="post">
+                            <form action="{{route('user_reservation_add',['id'=>$room->id])}}" method="post">
                                 @csrf
                                 <div class="row">
                                     <div class="col-lg-6 form-group">

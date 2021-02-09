@@ -26,9 +26,7 @@
                                         @csrf
                                         @livewire('search')
                                     </form>
-                                    @section('footerjs')
                                         @livewireScripts
-                                    @endsection
                                 </div>
                             </div>
                         </section>

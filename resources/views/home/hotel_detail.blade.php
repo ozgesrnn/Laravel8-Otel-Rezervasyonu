@@ -16,6 +16,39 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/animate.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/owl.carousel.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/owl.theme.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/prettyPhoto.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/smoothness/jquery-ui-1.10.4.custom.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/theme.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/colors/blue.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/css/responsive.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
+
+    <!-- Javascripts -->
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.forms.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/waypoints.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.gmap.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js')}}/js/custom.js"></script>
+
     <!------ Include the above in your HEAD tag ---------->
     <!-- Font Awesome Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -139,7 +172,7 @@
 @section('content')
 
     <!-- end:fh5co-header -->
-    <div class="fh5co-parallax" style="background-image: url({{asset('assets')}}/images/paris.jpeg);"
+    <div class="fh5co-parallax" style="background-image: url({{asset('assets')}}/images/slider2.jpg);"
          data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -199,8 +232,8 @@
             </script>
     <!-- Reservation form -->
     <section id="reservation-form" class="mt50 clearfix">
-        <div class="col-sm-12 col-md-4">
-            <form class="reservation-vertical clearfix" role="form" method="post" action="" name="reservationform" id="reservationform">
+        <div class="col-sm-8 col-md-4">
+            <form class="reservation-vertical clearfix" role="form" method="post" action="{{route('user_reservations',['hotel_id' => $data->id, 'id' => $data->id])}}" name="reservationform" id="reservationform">
                 <h2 class="lined-heading"><span>Reservation</span></h2>
                 <div class="price">
                     <h4>{{ $data->title }}</h4>
@@ -257,7 +290,8 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+
+                <button type="submit"  class="btn btn-primary btn-block">Book Now</button>
             </form>
         </div>
     </section>

@@ -28,15 +28,6 @@ class HomeController extends Controller
         return Setting::first();
     }
 
-    public function reservation($id,$slug)
-    {
-       echo "Rezervasyon <br>" ;
-       $data = Hotel::find($id);
-       print_r($data);
-       exit();
-    }
-
-
 
     public function index()
     {
@@ -68,7 +59,7 @@ class HomeController extends Controller
     }
     public function gethotel(Request $request)
     {
-        $search=$request->input('search');
+        $search = $request->input('search');
 
         $count = Hotel::where('title', 'like' , '%' .$search.'%')->get()->count();
         if ($count==1)
@@ -86,7 +77,7 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
         $datalist = Hotel::where('title', 'like', '%'.$search.'%' )->get();
-        return view('home.search_hotels', ['search'=>$search, 'datalist'=>$datalist, 'setting' => $setting]);
+        return view('home.search_hotels', ['search' => $search , 'datalist'=>$datalist, 'setting' => $setting]);
     }
 
     public function categoryhotels($id)

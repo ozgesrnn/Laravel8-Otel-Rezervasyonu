@@ -34,6 +34,7 @@
                                     @livewire('search')
                                     <button class="btn btn-dark" type="submit">Search</button>
                                 </form>
+
                                 @livewireScripts
                             </div>
 

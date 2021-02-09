@@ -23,7 +23,6 @@
                         <th>City/Country</th>
                         <th>Image</th>
                         <th>Galeri</th>
-                        <th>Room</th>
                         <th>Durum</th>
                         <th>İşlemler</th>
 

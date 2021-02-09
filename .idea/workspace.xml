@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd688bee-754e-4c34-87f3-514f4e3d9d00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/home/reservation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/room.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/room.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/room_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/room_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/reservation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/search_hotels.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/search_hotels.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/search_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/search_page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/user_reservation_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_reservation_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -290,7 +289,8 @@
       <workItem from="1612641516795" duration="13046000" />
       <workItem from="1612674792931" duration="13602000" />
       <workItem from="1612695919647" duration="26576000" />
-      <workItem from="1612772089683" duration="15820000" />
+      <workItem from="1612772089683" duration="31321000" />
+      <workItem from="1612882876708" duration="1255000" />
     </task>
     <task id="LOCAL-00001" summary="index changed">
       <created>1607198732025</created>
@@ -355,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612775083300</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Hatalar düzeltildi.Admin/Room edit,delete işlemleri gerçekleştirildi.">
+      <created>1612807976861</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612807976861</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +373,8 @@
     <MESSAGE value="hatalar düzeltildi." />
     <MESSAGE value="hatalar düzeltildi.Room model,controller ve view oluşturuldu" />
     <MESSAGE value="Hatalar düzeltildi.Reservation controller ve view oluşturuldu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hatalar düzeltildi.Reservation controller ve view oluşturuldu" />
+    <MESSAGE value="Hatalar düzeltildi.Admin/Room edit,delete işlemleri gerçekleştirildi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Hatalar düzeltildi.Admin/Room edit,delete işlemleri gerçekleştirildi." />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1612700199192">
@@ -381,18 +389,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607439027714" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612796111624">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612821306118">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612796111624" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612821306118" />
     <state x="547" y="502" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1608541782207">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="547" y="502" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1536.824@0.0.1536.824" timestamp="1608541782207" />
-    <state x="679" y="0" key="CommitChangelistDialog2" timestamp="1612775082257">
+    <state x="671" y="0" key="CommitChangelistDialog2" timestamp="1612807976166">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="679" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612775082257" />
+    <state x="671" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612807976166" />
     <state x="93" y="93" width="1320" height="638" key="DiffContextDialog" timestamp="1612692506897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -425,10 +433,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1612100569412" />
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612775091807">
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612807984554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612775091807" />
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612807984554" />
     <state x="643" y="299" width="312" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1612114708479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

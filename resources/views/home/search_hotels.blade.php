@@ -3,7 +3,7 @@
   @endphp
 @extends('home.homepage')
 
-@section('title '.$search)
+@section('title', $search. 'Hotel List')
     @include('home._header')
 
 @section('content')
@@ -33,7 +33,7 @@
         <!-- price -->
         <div class="rooms-w3ls bg-li py-5" id="price">
             <div class="container-fluid py-xl-5 py-lg-3">
-                <h3 class="tittle text-center text-bl font-weight-bold">{{$search}}</h3>
+                <h3 class="tittle text-center text-bl font-weight-bold"></h3>
                 <div class="row">
                     @foreach($datalist as $rs)
                         <div class="col-lg-4 price-mobamus">

@@ -1,6 +1,10 @@
 <html>
 <head>
     <title>Image Galeri</title>
+
+    <link href="{{asset('assets')}}/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets')}}/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets')}}/admin/css/ruang-admin.min.css" rel="stylesheet">
     <link href="{{asset('assets')}}/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="{{asset('assets')}}/admin/https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -43,15 +47,14 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($images as $rs )
-                            <tr>
-                                <td>{{$rs->id}}</td>
-                                <td>{{$rs->title}}</td>
-                                <td>
-                                    @if ($data->image)
-                                        <img src="{{ Storage::url($data->image) }}" height="30" alt="">
+                            @foreach($images as $rs )
+                                <tr>
+                                    <td>{{$rs->id}}</td>
+                                    <td>{{$rs->title}}</td>
+                                    <td>
+                                        @if ($data->image)
+                                            <img src="{{ Storage::url($data->image) }}" height="30" alt="">
                                     @endif
-                                </td>
                                 <td><a href="{{route('admin_image_delete',['id' => $rs->id,'hotel_id' => $data->id])}}" onclick="return confirm('Delete! Are you sure? ')"><i class="fa fa-times" ></i></a></td>
 
                             </tr>
