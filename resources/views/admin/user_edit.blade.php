@@ -18,7 +18,7 @@
     </div>
     <div class="card-body">
 
-        <form role="form" action="{{route('admin_hotel_update', ['id' => $data->id ])}}" method="post">
+        <form role="form" action="{{route('admin_user_update', ['id' => $data->id ])}}" method="post">
             @csrf
             <div class="card-body">
                 <div class="form-group">
@@ -47,7 +47,7 @@
                 <input type="file" name="image" class="form-control" id="exampleInputPassword1">
 
                 @if ($data->profile_photo_path)
-                    <img src="{{Storage::url($rs->profile_photo_path)}}" height="200" alt="">
+                    <img src="{{Storage::url($data->profile_photo_path)}}" height="200" alt="">
                 @endif
             </div>
     <!-- /.card-body -->
