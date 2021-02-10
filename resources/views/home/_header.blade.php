@@ -23,7 +23,7 @@
                                 <li>
 
                                       @auth
-                                                <a class="active">{{ Auth::user()->name }}</a>
+                                                <a class="active">{{ Auth::user()->name }} {{Auth::user()->roles->pluck('name')}}</a>
                                         @endauth
                                         @guest
                                               <a href="{{route('myprofile')}}"class="fh5co-sub-ddown">My Account</a>

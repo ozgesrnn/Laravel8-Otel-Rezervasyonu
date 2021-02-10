@@ -307,8 +307,8 @@
                             <a class="dropdown-item" href="{{asset('assets')}}/admin/#" data-toggle="modal" data-target="#logoutModal">
                                 @auth()
                                     {{Auth::user()-> name }}</a>
-                                    <a href="{{route('logout')}}" class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></a>
-                                Logout
+                                    <a href="{{route('logout')}}" class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400">Logout</a>
+
                             @endauth
                         </div>
                     </li>
