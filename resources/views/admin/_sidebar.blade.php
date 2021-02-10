@@ -53,11 +53,26 @@
                 <span>Odalar</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{route('admin_reservations')}}">
+                <i class="far fa-fw fa-window-maximize"></i>
+                <span>Rezervasyonlar</span>
+            </a>
+        </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="">
-                <i class="fas fa-fw fa-calendar"></i>
-                <span>Rezervasyon</span></a>
+            <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapsePages"
+               aria-expanded="true" aria-controls="collapsePages">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Rezervasyon</span>
+            </a>
+            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="login.html">Yeni Rezervasyonlar</a>
+                    <a class="collapse-item" href="register.html">Accepted Reservations</a>
+                    <a class="collapse-item" href="forgot-password.html">Completed Reservations</a>
+                </div>
+            </div>
         </li>
 
 
