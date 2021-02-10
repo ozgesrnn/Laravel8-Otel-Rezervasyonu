@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dd688bee-754e-4c34-87f3-514f4e3d9d00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/reservations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reservations.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +280,7 @@
       <workItem from="1612695919647" duration="26576000" />
       <workItem from="1612772089683" duration="31321000" />
       <workItem from="1612882876708" duration="16540000" />
-      <workItem from="1612942045592" duration="324000" />
+      <workItem from="1612942045592" duration="934000" />
     </task>
     <task id="LOCAL-00001" summary="index changed">
       <created>1607198732025</created>
@@ -382,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612908992731</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Roles tablosu controller oluşturuldu.">
+      <created>1612942428801</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612942428801</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +403,8 @@
     <MESSAGE value="Hatalar düzeltildi." />
     <MESSAGE value="Hatalar düzeltildi.Rezervasyon ödeme işlemleri" />
     <MESSAGE value="Hatalar düzeltildi.Admin Rezervasyon Controller işlemleri yapıldı." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hatalar düzeltildi.Admin Rezervasyon Controller işlemleri yapıldı." />
+    <MESSAGE value="Roles tablosu controller oluşturuldu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Roles tablosu controller oluşturuldu." />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1612700199192">
@@ -421,10 +427,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="547" y="502" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1536.824@0.0.1536.824" timestamp="1608541782207" />
-    <state x="535" y="0" key="CommitChangelistDialog2" timestamp="1612908992217">
+    <state x="535" y="0" key="CommitChangelistDialog2" timestamp="1612942426547">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="535" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612908992217" />
+    <state x="535" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612942426547" />
     <state x="93" y="93" width="1320" height="638" key="DiffContextDialog" timestamp="1612692506897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -457,10 +463,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1612100569412" />
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612908999675">
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612942437031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612908999675" />
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612942437031" />
     <state x="643" y="299" width="312" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1612114708479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
