@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd688bee-754e-4c34-87f3-514f4e3d9d00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_roles.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/review_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/review_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/rezervasyon_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/rezervasyon_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user_show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/categorytree.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/categorytree.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +290,9 @@
       <workItem from="1612695919647" duration="26576000" />
       <workItem from="1612772089683" duration="31321000" />
       <workItem from="1612882876708" duration="16540000" />
-      <workItem from="1612942045592" duration="9404000" />
+      <workItem from="1612942045592" duration="13110000" />
+      <workItem from="1612959044623" duration="1095000" />
+      <workItem from="1612960178792" duration="8617000" />
     </task>
     <task id="LOCAL-00001" summary="index changed">
       <created>1607198732025</created>
@@ -412,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612948490366</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Admin Panel User düzenlendi">
+      <created>1612955353834</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1612955353834</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,17 +447,18 @@
     <MESSAGE value="Role user tablosu controller oluşturuldu." />
     <MESSAGE value="Role user kontrolleri yetkilendirmeleri oluşturuldu." />
     <MESSAGE value="Admin Panel User managment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Panel User managment" />
+    <MESSAGE value="Admin Panel User düzenlendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Panel User düzenlendi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1612700199192">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1612700199192" />
-    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612614454641">
+    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612965976796">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1612614454641" />
+    <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1612965976796" />
     <state x="800" y="128" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612943719160">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -459,10 +475,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="547" y="502" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1536.824@0.0.1536.824" timestamp="1608541782207" />
-    <state x="535" y="0" key="CommitChangelistDialog2" timestamp="1612948489560">
+    <state x="535" y="0" key="CommitChangelistDialog2" timestamp="1612955353330">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="535" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612948489560" />
+    <state x="535" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612955353330" />
     <state x="93" y="93" width="1320" height="638" key="DiffContextDialog" timestamp="1612692506897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -479,10 +495,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="952" y="134" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1610640278817" />
-    <state x="834" y="346" key="NewPhpFileDialog" timestamp="1610472054711">
+    <state x="834" y="346" key="NewPhpFileDialog" timestamp="1612965294413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="834" y="346" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1610472054711" />
+    <state x="834" y="346" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1612965294413" />
     <state x="590" y="132" key="RollbackChangesDialog" timestamp="1612126514414">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -495,10 +511,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1612100569412" />
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612948496907">
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612955359525">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612948496907" />
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612955359525" />
     <state x="643" y="299" width="312" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1612114708479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

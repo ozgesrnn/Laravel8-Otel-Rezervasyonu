@@ -1,3 +1,7 @@
+@php
+    $parentCategories = \App\Http\Controllers\HomeController::getsetting()
+@endphp
+
 @extends('layouts.admin')
 
 @section('title', 'Hotel List')
@@ -34,8 +38,8 @@
                     <tr>
                         <td>{{ $rs -> id }}</td>
                         <td>
-                            {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category , $rs->category->title )}}
-                        </td>
+                            {{$rs->category_id}}
+                            </td>
                         <td>{{ $rs -> title }}</td>
                         <td>{{ $rs -> address }}</td>
                         <td>{{ $rs -> phone }}</td>

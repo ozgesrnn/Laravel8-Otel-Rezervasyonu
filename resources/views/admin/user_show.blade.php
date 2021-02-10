@@ -25,14 +25,28 @@
                <div class="card-body">
                    <div class="table-responsive">
                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                           <tr>
-                               <th>Id</th>  <td>{{ $data -> id }}</td>
+                            <tr>
+                                <th rowspan="8" align="center" valign="center">
+                                    <td>
+                                    @if(Auth::user()->profile_photo_path)
+                                        <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="300" style="border-radius: 10px" alt="User Image">
+                                    @endif
+                                  </td>
                            </tr>
                            <tr>
                                <th>Name</th> <td>{{ $data -> name }}</td>
                            </tr>
                            <tr>
                                <th>Email</th> <td>{{ $data -> email }}</td>
+                           </tr>
+                           <tr>
+                               <th>Phone</th> <td>{{ $data -> phone }}</td>
+                           </tr>
+                           <tr>
+                               <th>Address</th> <td>{{ $data -> address }}</td>
+                           </tr>
+                           <tr>
+                               <th>Date</th> <td>{{ $data -> created_at }}</td>
                            </tr>
                            <tr>
                                <th>Roles</th>
