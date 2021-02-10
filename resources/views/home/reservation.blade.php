@@ -1,15 +1,29 @@
 @php
-    $setting = \App\Http\Controllers\HomeController::getsetting()
+    $setting=\App\Http\Controllers\HomeController::getsetting();
 @endphp
-
 @extends('home.homepage')
+@section('title', $setting->title)
 
-@section('title' , $setting->title)
-@section('description'){{$setting->title}}@endsection
-@section('keywords' , $setting->title)
+@section('description'){{ $setting->description}}@endsection
 
+@section('keywords',$setting->keywords)
 
 @section('content')
+    <div class="fh5co-parallax" style="background-image: url({{asset('assets')}}/images/slider1.jpeg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+                    <div class="fh5co-intro fh5co-table-cell">
+                        <h1 class="text-center" href="{{route('anasayfa')}}">Home</h1>
+                        <li class="breadcrumb-item active" aria-current="page">Rezervasyon</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <section class="contact py-5" id="contact">
         <div class="container py-xl-5 py-lg-3">
@@ -18,29 +32,29 @@
                     <h3 class="tittle text-center text-bl font-weight-bold">Rezervasyon Formu</h3>
 
                     @include('home.message')
+
                     <div class="comment-top mt-5">
 
                         <div class="comment-bottom mobamuinfo_mail_grid_right">
-                            <form action="{{route('user_reservation_add',['id'=>$room->id])}}" method="post">
+                            <form action="{{route('sendrezerve',['id'=>$room->id])}}" method="post">
                                 @csrf
                                 <div class="row">
                                     <div class="col-lg-6 form-group">
                                         <label>First Name</label>
                                         <input class="form-control" type="text" name="name"  placeholder="Type Here.." required="">
                                     </div>
+                                    <div class="col-lg-6 form-group">
+                                        <label>Last Name</label>
+                                        <input class="form-control" type="text" name="surname"  placeholder="Type Here.." required="">
+                                    </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-6 form-group">
-                                        <label>Email</label>
-                                        <input class="form-control" type="email" name="email" placeholder="Email" required="">
-                                    </div>
-                                    <div class="col-lg-6 form-group">
-                                        <label>Phone Number</label>
-                                        <input class="form-control" type="text" name="phone" placeholder="Phone Number" required="">
-                                    </div>
+
+                                <div class="col-lg-6 form-group">
+                                    <label>Phone Number</label>
+                                    <input class="form-control" type="text" name="phone" placeholder="Phone Number" required="">
+                                </div>
 
 
-                                </div>
                                 <div class="row">
                                     <div class="col-lg-6 form-group date-plu">
                                         <label>Checkin</label>
@@ -54,37 +68,15 @@
                                 </div>
 
                                 <div class="row">
-
-                                    <div class="col-lg-6 form-group">
-                                        <label>Kişi Sayısı</label>
-                                        <td><br><input type="number" style="width: 480px; height:45px;" value="adet" name="adet" id="adet"/></td>
-
+                                    <div class="col-lg-5  form-group">
+                                        <label>Note</label>
+                                        <textarea class="form-control" name="note" placeholder="Write Here.." required=""></textarea>
                                     </div>
-                                </div>
-                                <div class="col-lg-5  form-group">
-                                    <label>Note</label>
-                                    <textarea class="form-control" name="note" placeholder="Write Here.." required=""></textarea>
-                                </div>
-                                <div class="col-lg-3 form-group">
-                                    <label>Days</label>
 
-                                    <input class="form-control" type="number" name="days" placeholder="days" required="">
 
                                 </div>
-                                <div class="col-lg-3 form-group">
-                                    <label>Total Price</label>
 
-                                    <input class="form-control" type="number" name="total" placeholder="total number" required="">
 
-                                </div>
-                                <div class="form-group">
-                                    <label >Onaylıyormusunuz?</label>
-                                    <select class="select2-single form-control" name="status" id="select2Single">
-                                        <option selected="selected" value="False">Evet</option>
-                                        <option value="True">Hayır</option>
-
-                                    </select>
-                                </div>
                                 <button type="submit" class="btn submit mt-3">Book Now</button>
                             </form>
                         </div>
@@ -96,4 +88,6 @@
         </div>
     </section>
     </div>
+
+
 @endsection

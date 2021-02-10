@@ -9,8 +9,8 @@
                     <div class="col-md-12 col-md-offset-0 text-center slider-text">
                         <div class="slider-text-inner js-fullheight">
                             <div class="desc">
-                                <p><span>{{$rs->title}}</span></p>
-                                <p> <a href="{{route('hotel',['id' => $rs->id, 'slug' => $rs->slug]  )}}"  class="btn btn-primary btn-lg">Oteli İncele</a>
+                                <p><span></span></p>
+                                <p><a href="{{route('hotel',['id' => $rs->id, 'slug' => $rs->slug]  )}}"  class="btn btn-primary btn-lg">Oteli İncele</a>
                             </div>
                         </div>
                     </div>

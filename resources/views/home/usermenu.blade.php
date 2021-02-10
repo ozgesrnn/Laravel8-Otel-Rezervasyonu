@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <ul class="link">
                 <li><a href="{{route('myprofile')}}" class="active">My Profile</a></li>
-                <li><a href="{{route('user_reservation_store')}}/#">Rezervasyonlar</a></li>
+                <li><a href="">Rezervasyonlar</a></li>
                 <li><a href="{{asset('myreviews')}}">Review</a></li>
                 <li><a href="{{route('logout')}}">Logout</a></li>
                 @php

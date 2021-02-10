@@ -1,5 +1,5 @@
 @php
-    $parentCategories = \App\Http\Controllers\HomeController::getsetting()
+    $parentCategories = \App\Http\Controllers\HomeController::categorylist()
 @endphp
 
 @extends('layouts.admin')
@@ -38,8 +38,8 @@
                     <tr>
                         <td>{{ $rs -> id }}</td>
                         <td>
-                            {{$rs->category_id}}
-                            </td>
+                           {{$rs->category_id}}
+                        </td>
                         <td>{{ $rs -> title }}</td>
                         <td>{{ $rs -> address }}</td>
                         <td>{{ $rs -> phone }}</td>

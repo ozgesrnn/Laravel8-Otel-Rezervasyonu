@@ -2,55 +2,10 @@
     $setting=\App\Http\Controllers\HomeController::getsetting();
 @endphp
 @extends('home.homepage')
-@section('title' , $data->title )
-@section('description'){{$data->description}}@endsection
-@section('keywords' , $data->keywords)
-
+@section('Hotel Detayı',$setting->title)
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/animate.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/bootstrap.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/owl.carousel.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/owl.theme.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/prettyPhoto.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/smoothness/jquery-ui-1.10.4.custom.min.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/rs-plugin/css/settings.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/theme.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/colors/blue.css">
-    <link rel="stylesheet" href="{{asset('assets/css')}}/css/responsive.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
-
-    <!-- Javascripts -->
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/bootstrap-hover-dropdown.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.parallax-1.1.3.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.nicescroll.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.prettyPhoto.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery-ui-1.10.4.custom.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.forms.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.sticky.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/waypoints.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.isotope.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/jquery.gmap.min.js"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/js')}}/js/custom.js"></script>
-
-
-    <!------ Include the above in your HEAD tag ---------->
     <!-- Font Awesome Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @livewireStyles
@@ -59,45 +14,38 @@
             color: orange;
         }
     </style>
-    <style>* {
+    <style>*{
             margin: 0;
             padding: 0;
         }
-
         .rate {
             float: left;
             height: 46px;
             padding: 0 10px;
         }
-
         .rate:not(:checked) > input {
-            position: absolute;
-            top: -9999px;
+            position:absolute;
+            top:-9999px;
         }
-
         .rate:not(:checked) > label {
-            float: right;
-            width: 1em;
-            overflow: hidden;
-            white-space: nowrap;
-            cursor: pointer;
-            font-size: 30px;
-            color: #ccc;
+            float:right;
+            width:1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:30px;
+            color:#ccc;
         }
-
         .rate:not(:checked) > label:before {
             content: '★ ';
         }
-
         .rate > input:checked ~ label {
             color: #ffc700;
         }
-
         .rate:not(:checked) > label:hover,
         .rate:not(:checked) > label:hover ~ label {
             color: #deb217;
         }
-
         .rate > input:checked + label:hover,
         .rate > input:checked + label:hover ~ label,
         .rate > input:checked ~ label:hover,
@@ -107,15 +55,11 @@
         }
     </style>
     <style>
-        .mySlides {
-            display: none;
-        }
+        .mySlides {display:none;}
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            font-family: Arial;
-        }
+        body {font-family: Arial;}
 
         /* Style the tab */
         .tab {
@@ -153,60 +97,46 @@
             border: 1px solid #ccc;
             border-top: none;
         }
-
-        .button {
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .button2 {background-color: #008CBA;} /* Blue */
     </style>
 </head>
 
 @section('content')
+    <div class="main-top" id="home">
 
-    <!-- end:fh5co-header -->
-    <div class="fh5co-parallax" style="background-image: url({{asset('assets')}}/images/slider2.jpg);"
-         data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div
-                    class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
-                    <div class="fh5co-intro fh5co-table-cell">
-                        <h4><a href="{{route('anasayfa')}}" class="text-center">Home</a></h4>
-                        <h4>
-                            <a class="active">{{\App\Http\Controllers\Admin\CategoryController::getParentsTree($data , $data->title )}}
-                                - Hotel List</a></h4>
-                    </div>
-                </div>
-            </div>
+
+        <!-- banner -->
+        <div class="banner_w3lspvt-2">
+
         </div>
+        <!-- //banner -->
+    </div>
+    <!-- //main banner -->
+
+    <!-- page details -->
+    <div class="breadcrumb-mobamu">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{{route('anasayfa')}}">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{{$data->title}}</li>
+        </ol>
     </div>
 
-    <div class="col-sm-12 col-md-8">
+
     <section class="contact py-5" id="contact">
-        <div class="container py-md-12 py-lg-8 ">
+        <div class="container py-xl-5 py-lg-3">
             <h2 class="w3-center">{{$data->title}}</h2>
+
+
             <div class="w3-content w3-display-container">
-                <img class="mySlides" src="{{ Storage::url($data->image) }}" style="height:500px">
+                <img class="mySlides" src="{{ Storage::url($data->image) }}" style="width:100%">
                 @foreach($datalist as $rs)
-                    <img class="mySlides" src="{{ Storage::url($rs->image) }}" style="height:500px">
+                    <img class="mySlides" src="{{ Storage::url($rs->image) }}" style="width:100%">
                 @endforeach
 
                 <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
             </div>
-        </div>
-    </section>
-    </div>
 
             <script>
                 var slideIndex = 1;
@@ -219,157 +149,152 @@
                 function showDivs(n) {
                     var i;
                     var x = document.getElementsByClassName("mySlides");
-                    if (n > x.length) {
-                        slideIndex = 1
-                    }
-                    if (n < 1) {
-                        slideIndex = x.length
-                    }
+                    if (n > x.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = x.length}
                     for (i = 0; i < x.length; i++) {
                         x[i].style.display = "none";
                     }
-                    x[slideIndex - 1].style.display = "block";
+                    x[slideIndex-1].style.display = "block";
                 }
             </script>
-    <!-- Reservation form -->
-    <section id="reservation-form" class="mt50 clearfix">
-        <div class="col-sm-8 col-md-4">
-            <form class="reservation-vertical clearfix" role="form" method="post" action=""name="reservationform" id="reservationform">
-                <h2 class="lined-heading"><span>Reservation</span></h2>
-                <div class="price">
-                    <h4>{{ $data->title }}</h4>
-                    &dollar; {{$data->price}},-<span> a night</span></div>
-                <div id="message"></div>
-                <!-- Error message display -->
-                <div class="form-group">
-                    <label for="email" accesskey="E">E-mail</label>
-                    <input name="email" type="text" id="email" value="" class="form-control" placeholder="Please enter your E-mail"/>
-                </div>
-                <div class="form-group">
-                    <select class="hidden" name="room" id="room">
-                        <option selected="selected"></option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="checkin">Check-in</label>
-                    <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-In is from 11:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                    <input name="checkin" type="date" id="checkin" value="" class="form-control" placeholder="Check-in"/>
-                </div>
-                <div class="form-group">
-                    <label for="checkout">Check-out</label>
-                    <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-out is from 12:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                    <input name="checkout" type="date" id="checkout" value="" class="form-control" placeholder="Check-out"/>
-                </div>
-                <div class="form-group">
-                    <div class="guests-select">
-                        <label>Guests</label>
-                        <i class="fa fa-user infield"></i>
-                        <div class="total form-control" id="test">1</div>
-                        <div class="guests">
-                            <div class="form-group adults">
-                                <label for="adults">Adults</label>
-                                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="+18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                                <select name="adults" id="adults" class="form-control">
-                                    <option value="1">1 adult</option>
-                                    <option value="2">2 adults</option>
-                                    <option value="3">3 adults</option>
-                                </select>
-                            </div>
-                            <div class="form-group children">
-                                <label for="children">Children</label>
-                                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="0 till 18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                                <select name="children" id="children" class="form-control">
-                                    <option value="0">0 children</option>
-                                    <option value="1">1 child</option>
-                                    <option value="2">2 children</option>
-                                    <option value="3">3 children</option>
-                                </select>
-                            </div>
-                            <button type="button" class="btn btn-default button-save btn-block">Save</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="a-col action">
-                <a href="{{route('user_reservations',['hotel_id' => $data->id, 'id' => $data->id])}}">
-                    <span>Book Now</span>
-
-                </a>
-                </div>
-            </form>
-        </div>
-    </section>
             <br><br>
-            <!-- Room Content -->
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-7 mt50">
-                            <h2 class="lined-heading"><span>Details</span></h2>
-                            <h3 class="mt50">Bilgiler</h3>
-                            <table class="table table-striped mt30">
-                                <tbody>
-                                <tr>
-                                    <td><i class="fa fa-check-circle"></i> City: {!! $data->city !!}</td>
-                                    <td><i class="fa fa-check-circle"></i> Country: {!! $data->country !!}</td>
-                                    <td><i class="fa fa-check-circle"></i> Address: {!! $data->address !!}</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fa fa-check-circle"></i> Phone: {!! $data->phone !!}</td>
-                                    <td><i class="fa fa-check-circle"></i> Email: {!! $data->email !!}</td>
-                                    <td><i class="fa fa-check-circle"></i> Price: {!! $data->price !!} TL/Night</td>
-                                </tr>
-                                </tbody>
-                            </table>
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'London')">Detaylar</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Odalar</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Yorumlar</button>
+            </div>
 
+            <div id="London" class="tabcontent">
+                <h3>Detaylar</h3>
+                <p>{!! $data->detail !!}</p>
+            </div>
 
-                            <p class="mt50"> </div>
-                        <div class="col-sm-5 mt50">
-                            <h2 class="lined-heading"><span>Diğer</span></h2>
+            <div id="Paris" class="tabcontent">
+                <h3>Odalar</h3>
+                <div class="table-responsive p-3">
+                    <table class="table align-items-center table-flush table-hover" id="dataTableHover">
+                        <thead class="thead-light">
+                        <tr>
+                            <th>Title</th>
+                            <th>image</th>
+                            <th>Fiyat</th>
+                            <th>Rezervasyon Yap</th>
 
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#overview" data-toggle="tab">Detaylar</a></li>
-                                <li><a href="#facilities" data-toggle="tab">Odalar</a></li>
-                                <li><a href="#extra" data-toggle="tab">Yorum</a></li>
-                            </ul>
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div class="tab-pane fade in active" id="overview">
-                                    <p>{!! $data->detail !!} </p>
-                                </div>
+                        </tr>
+                        </thead>
 
-                                <div class="tab-pane fade" id="facilities">  @if ($data->image)
-                                        <img src="{{ Storage::url($data->image) }}" height="200px" alt="">
-                                    @endif
-                                </div>
-                            <div class="tab-pane fade" id="facilities">
-                                <div class="comment-post">
-                                    @include('home.message')
-                                    <form action="{{route('sendreview',['id'=>$data->id,'slug'=>$data->slug])}}" method="post" class="comment-form" name="review-form">
-                                        @csrf
-                                    </form>
-                                </div>
+                        <tbody>
+                        @foreach($rooms as $rs )
+                            <tr>
+                                <td><br>{{$rs->title}}</td>
+                                <td><a href="{{ Storage::url($rs->image) }}" onclick="return !window.open(this.href, '','top=50 left=100 width=1100 height=700') ">
+
+                                        <br><img src="{{ Storage::url($rs->image) }}" height="30" alt="">
+                                    </a>
+                                </td>
+
+                                <td><br>{{$rs->price}} ₺</td>
+
+                                <form action="{{route('reservation',['id' => $rs->id])}}" method="post">
+                                    @csrf
+                                    <td><button type="submit" class="btn button-style-3 mt-sm-2 mt-1">Book Now</button></td>
+                                </form>
+                            </tr>
+                        @endforeach
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+            <div id="Tokyo" class="tabcontent">
+
+                <h3>Yorumlar</h3>
+
+                @foreach($reviews as $rs)
+
+                    <ul class="media-list">
+                        <li class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="#" alt="" />
+                            </a>
+                            <div class="media-body">
+                                <h5 class="media-heading"><a href="#">{{$rs->user->name}}</a></h5>
+                                <span>{{$rs->created_at}}</span>
+                                <strong>{{$rs->subject}}</strong>
+                                <p>{{$rs->review}}</p>
+
+                                <i class="fa fa-star @if ($rs->rate>0) checked @endif"></i>
+                                <i class="fa fa-star @if ($rs->rate>1) checked @endif"></i>
+                                <i class="fa fa-star @if ($rs->rate>2) checked @endif"></i>
+                                <i class="fa fa-star @if ($rs->rate>3) checked @endif"></i>
+                                <i class="fa fa-star @if ($rs->rate>4) checked @endif"></i>
+
                             </div>
-                                <div class="tab-pane fade" id="extra">
-                                    <div class="col-md-12">
-                                            <h4 class="text-uppercase"></h4>
-                                            @livewire('review', ['id' => $data->id])
-                                        </div>
-                                </div>
+                        </li>
+                    </ul>
+                @endforeach
+                <div class="comment-post">
+                    @include('home.message')
+                    <h4>Leave a comment</h4>
+
+                    <form action="{{route('sendreview',['id'=>$data->id,'slug'=>$data->slug])}}" method="post" class="comment-form" name="review-form">
+                        @csrf
+                        <div class="" style="padding-left: 20px;">
+                            <br>
+                            <div class="span8">
+                                <label>Subject <span>*</span></label>
+                                <input type="text" name="subject" id="subject" class="input-block-level" placeholder="Your subject" />
+                            </div>
+
+                            <div class="span5">
+                                <label>Review <span>*</span></label>
+                                <textarea rows="5" name="review" id="review" class="input-block-level" placeholder="Your comment"></textarea>
+
                             </div>
                         </div>
-                    </div>
+                        <div class="rate">
+
+                            <input type="radio" name="rate" id="star5"  value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" name="rate" id="star4"  value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" name="rate" id="star3"  value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" name="rate" id="star2"  value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" name="rate" id="star1"  value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
+                        @auth
+                            <button class="btn btn-theme" type="submit">Submit review</button>
+                        @else
+                            <a href="/login" class="btn btn-theme">For submit please Login</a>
+                        @endauth
+                    </form>
                 </div>
-            </section>
+            </div>
+
+            <script>
+                function openCity(evt, cityName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+            </script>
+
+
         </div>
     </section>
-
-
-
-
-
+    </div>
 
 
 @endsection
-
-

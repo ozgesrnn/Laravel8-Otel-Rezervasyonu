@@ -6,8 +6,9 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold float-right text-primary"><strong>{{$datalist->count()}}</strong> Room Bulundu.</h6>
-            <a href="" type="submit" class="btn btn-primary">Room Ekle</a>
-        </div>
+            <div class="card">
+                <a href="{{route('admin_room_add')}}" type="button" class="btn btn-danger mb-1" style="width: 200px">Oda Ekle</a>
+            </div>
         <div class="table-responsive p-3">
             <table class="table align-items-center table-flush table-hover" id="dataTableHover">
                 <thead class="thead-light">

@@ -47,7 +47,14 @@
                    <label>Price</label>
                    <input type="number" name="price" value="{{$data->price}}" class="form-control" >
                </div>
-
+               <div class="form-group">
+                   <label>Adet</label>
+                   <input type="number" name="adet" value="{{$data->adet}}" class="form-control" >
+               </div>
+               <div class="form-group">
+                   <label>Slug</label>
+                   <input type="text" name="slug" class="form-control" >
+               </div>
                <div class="form-group">
                    <label >Status</label>
                    <select class="select2-single form-control" name="status" id="select2Single">

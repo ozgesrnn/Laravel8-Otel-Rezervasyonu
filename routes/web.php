@@ -39,7 +39,9 @@ Route::get( '/categoryhotels/{id}/{slug}', [HomeController::class, 'categoryhote
 Route::post('/gethotel', [HomeController::class, 'gethotel'])->name('gethotel');
 Route::get('/hotellist/{search}', [HomeController::class, 'hotellist'])->name('hotellist');
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
-Route::get('/reservation', [HomeController::class, 'reservation'])->name('reservation');
+Route::post('/reservation/{id}', [HomeController::class, 'reservation'])->name('reservation');
+Route::post('/sendrezerve/{id}  ', [HomeController::class, 'sendrezerve'])->name('sendrezerve');
+
 
 
 
@@ -72,15 +74,17 @@ Route::middleware('auth')->prefix('admin')->group(function () {
             Route::get('show', [\App\Http\Controllers\Admin\HotelController::class, 'show'])->name('admin_hotel_show');
         });
 
-        #Room
-        Route::prefix('room')->group(function () {
+        //Room
+        Route::prefix('room')->group(function (){
+            Route::get('/',[\App\Http\Controllers\Admin\RoomController::class,'index'])->name('admin_rooms');
+            Route::get('create',[\App\Http\Controllers\Admin\RoomController::class,'create'])->name('admin_room_add');
+            Route::post('store',[\App\Http\Controllers\Admin\RoomController::class,'store'])->name('admin_room_store');
+            Route::get('edit/{id}',[\App\Http\Controllers\Admin\RoomController::class,'edit'])->name('admin_room_edit');
+            Route::post('update/{id}',[\App\Http\Controllers\Admin\RoomController::class,'update'])->name('admin_room_update');
+            Route::get('delete/{id}',[\App\Http\Controllers\Admin\RoomController::class,'destroy'])->name('admin_room_delete');
+            Route::get('show/{id}',[\App\Http\Controllers\Admin\RoomController::class,'show'])->name('admin_room_show');
 
-            Route::get('/', [\App\Http\Controllers\Admin\RoomController::class, 'index'])->name('admin_room');
-            Route::get('create/{hotel_id}/{id}', [\App\Http\Controllers\Admin\RoomController::class, 'create'])->name('admin_room_add');
-            Route::get('edit/{hotel_id}/{id}', [\App\Http\Controllers\Admin\RoomController::class, 'edit'])->name('admin_room_edit');
-            Route::post('store/{hotel_id}/{id}', [\App\Http\Controllers\Admin\RoomController::class, 'store'])->name('admin_room_store');
-            Route::get('delete/{id}/{hotel_id}', [\App\Http\Controllers\Admin\RoomController::class, 'destroy'])->name('admin_room_delete');
-            Route::get('show', [\App\Http\Controllers\Admin\RoomController::class, 'show'])->name('admin_room_show');
+
         });
 
 
@@ -160,19 +164,18 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
 
     #Rezervasyon
-    Route::prefix('reservation')->group(function () {
+Route::prefix('reservation')->group(function (){
 
-        Route::get('/', [\App\Http\Controllers\ReservationController::class, 'index'])->name('user_reservations');
-        Route::post('create/{hotel_id}/{id}', [\App\Http\Controllers\ReservationController::class, 'create'])->name('user_reservation_add');
-        Route::post('store', [\App\Http\Controllers\ReservationController::class, 'store'])->name('user_reservation_store');
-        Route::get('edit/{id}', [\App\Http\Controllers\ReservationController::class, 'edit'])->name('user_reservation_edit');
-        Route::post('update/{id}', [\App\Http\Controllers\ReservationController::class, 'update'])->name('user_reservation_update');
-        Route::get('delete/{id}', [\App\Http\Controllers\ReservationController::class, 'destroy'])->name('user_reservation_delete');
-        Route::get('show', [\App\Http\Controllers\ReservationController::class, 'show'])->name('user_reservation_show');
-    });
+    Route::get('/',[\App\Http\Controllers\ReservationController::class,'index'])->name('user_reservations');
+    Route::post('update/{id}',[\App\Http\Controllers\ReservationController::class,'update'])->name('user_reservation_update');
+    Route::get('delete/{id}',[\App\Http\Controllers\ReservationController::class,'destroy'])->name('user_reservation_delete');
+    Route::get('show/{id}',[\App\Http\Controllers\ReservationController::class,'show'])->name('user_reservation_show');
+
+});
 
 
-    Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
+
+Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
     Route::post('/admin/logincheck', [HomeController::class, 'logincheck'])->name('admin_logincheck');
     Route::get('/admin/logout', [HomeController:: class, 'logout'])->name('admin_logout');
 

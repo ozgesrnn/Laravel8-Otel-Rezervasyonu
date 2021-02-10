@@ -8,7 +8,9 @@ use App\Models\Category;
 use App\Models\Hotel;
 use App\Models\Image;
 use App\Models\Message;
+use App\Models\Reservation;
 use App\Models\Rezervasyon;
+use App\Models\Room;
 use App\Models\Setting;
 use Hamcrest\Core\Set;
 use App\Models\Review;
@@ -47,13 +49,14 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
         $data = Hotel::find($id);
+        $rooms=Room::where('hotel_id',$id)->get();
         $datalist = Image::where('hotel_id' ,$id)->get();
         $reviews = Review::where('hotel_id', $id)->get();
 
         /*print_r($data);
         exit();*/
 
-        return view('home.hotel_detail', ['setting' => $setting, 'data' => $data, 'datalist'=>$datalist, 'reviews'=>$reviews]);
+        return view('home.hotel_detail', ['setting' => $setting, 'data' => $data, 'datalist'=>$datalist, 'reviews'=>$reviews, 'rooms' => $rooms]);
 
 
     }
@@ -87,6 +90,7 @@ class HomeController extends Controller
         $data = Category::find($id);
         return view('home.category_hotels', ['data' => $data,  'datalist' => $datalist]);
     }
+
     public function sendmessage(Request $request)
     {
         $data = new Message();
@@ -98,6 +102,30 @@ class HomeController extends Controller
         $data->save();
 
         return redirect()->route('contact')->with('success', 'Mesajınız başarılı bir şekilde kaydedilmiştir!');
+    }
+    public function reservation($id)
+    {
+        $room = Room::find($id);
+        $data=Reservation::where('room_id',$id)->get();
+        return view('home.reservation', ['room' => $room,'data'=>$data]);
+    }
+    public function sendrezerve(Request $request,$id)
+    {
+        $data = new Reservation();
+        $data->room_id =$id;
+        $data->user_id = Auth::id();
+        $data->hotel_id = $id;
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->phone = $request->input('phone');
+        $data->checkin = $request->input('checkin');
+        $data->checkout = $request->input('checkout');
+        $data->note = $request->input('note');
+        $data->IP = $_SERVER['REMOTE_ADDR'];
+
+        $data->save();
+
+        return redirect()->route('user_reservations');
     }
 
     public function sendreview(Request $request,$id)
